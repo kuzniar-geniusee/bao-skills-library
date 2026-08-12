@@ -32,7 +32,6 @@ Invoke in any Claude Project chat with `/skill-name`.
 | `/flow-build` | ✅ ready | 3 · Requirements & Modelling | Builds editable stakeholder-review flowcharts for an epic. Output: FigJam file (one section per flow). | Flows for client review |
 | `/design-validation` | ✅ ready | 3 · Requirements & Modelling | Validates a design / flow PDF against the PC, findings only. Output: findings report. | Review a design vs requirements |
 | `/epic-pc-consistency` | ✅ ready | 3 · Requirements & Modelling | Validates a decomposed epic against the PC and neighbouring epics. Output: categorized findings. | Check an epic vs the PC |
-| `/nfr-quality` | ✅ ready | 3 · Requirements & Modelling | Generates or validates NFRs (ISO 25010 + Utility Tree). | Define or review NFRs |
 | `/jira-split` | ✅ ready | 4 · Tickets & Traceability | Maps and splits a WBS epic into the Jira ticket structure + subtasks. | Split an epic into Jira tickets |
 | `/jira-fill` | ✅ ready | 4 · Tickets & Traceability | Writes finalized story + AC into the matching Jira tickets. | Fill AC into Jira tickets |
 | `/traceability-matrix` | ✅ ready | 4 · Tickets & Traceability | Builds an epic → story → subtask coverage + progress matrix from Jira. Output: `traceability-matrix.xlsx`. | Need full project coverage overview |
