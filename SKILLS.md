@@ -18,6 +18,7 @@ Invoke in any Claude Project chat with `/skill-name`.
 | `/ba-governance` | ✅ ready | 1 · Project Setup | Prioritization, approvals, change control, DoR / DoD. Output: `governance.md`. | Need to define governance approach |
 | `/rma-generation` | ✅ ready | 1 · Project Setup | Requirements lifecycle, traceability, attributes, tooling. Output: RMA document. | Formalize requirements management |
 | `/ba-approach-and-activities` | ✅ ready | 1 · Project Setup | BA role, activities, deliverables, mutual commitments + kickoff agenda. | Kickoff / BA role alignment |
+| `/confluence-page-structure` | ✅ ready | 1 · Project Setup | Creates the empty Confluence page hierarchy for an epic — parent + one child page per spec section. Structure only, no content. | Set up spec pages for an epic |
 | `/elicitation-prep` | ✅ ready | 2 · Discovery & Elicitation | Structured question list for a session (project-wide / epic / sprint). Output: `questions_list_<scope>.md`. | Preparing for a client session |
 | `/open-questions-per-epic` | ✅ ready | 2 · Discovery & Elicitation | Per-epic open-questions register, routed and prioritized. Output: `open_questions_per_epic.xlsx`. | Open questions before refining an epic |
 | `/analyze-incoming` | ✅ ready | 2 · Discovery & Elicitation | Explains an incoming item and routes it to the next action. Output: triaged item list. | Client / dev input to process |
