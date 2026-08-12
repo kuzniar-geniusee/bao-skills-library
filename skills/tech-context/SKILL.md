@@ -3,7 +3,7 @@ name: tech-context
 description: "Generate `03_tech_context.md` for Project Knowledge from `01_project_context.md`, tech kickoff notes, stack descriptions, API documentation, architecture notes, glossary fragments, or developer input. Use during project setup or onboarding to capture stack, integrations, architecture notes, glossary, technical constraints, and open technical questions. Ask about domain-specific terms only when glossary language is missing, and never invent API fields, endpoints, or integration details."
 ---
 
-# Tech Context
+# /tech-context
 
 Generate `03_tech_context.md` as the technical grounding file for the project. Use it to support technically accurate requirements writing, API mapping, integration work, and validation with the tech team.
 
@@ -20,7 +20,7 @@ Generate `03_tech_context.md` as the technical grounding file for the project. U
 - PDF: extract key diagrams first (use /mnt or screenshot the relevant pages). Do NOT pass full multi-page PDFs.
 - For each diagram, capture: components, integration points, data flow direction. Reference diagram by name in output.
 
-## Procedure
+## Process
 
 ### 1. Extract technical context
 

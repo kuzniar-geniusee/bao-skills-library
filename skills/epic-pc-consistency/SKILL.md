@@ -5,11 +5,11 @@ description: "Validate a decomposed epic (stories + AC) against the Product Cont
 
 # /epic-pc-consistency
 
-## Purpose
+## What it does
 
 Check one decomposed epic's requirements (stories + AC) against the source of truth and its neighbours. This is to **requirements** what `design-validation` is to **designs**: a PC-first review that reports findings only — it never edits the PC, the stories, or the AC. Fixes are applied afterwards through `pc-update` / `notion-update` under the Refine mode.
 
-## When to invoke
+## When to use
 
 - After an epic is decomposed and its AC written (`decompose-wbs-epic` → `ears-ac`), before or during refinement, to check the whole epic against the PC and already-defined epics.
 - One epic per invocation.
@@ -38,7 +38,7 @@ Every finding lands in exactly one category and cites the PC (`§n`) or the spec
 | 4 | **Cross-epic clash** | A story duplicates or contradicts a rule/flow owned by a **defined** epic. Includes convention breaches — a rule owned elsewhere must be referenced, not re-stated (`ears-ac` house rule). |
 | 5 | **Internal inconsistency** | Two stories (or their AC) within this same epic contradict each other. |
 
-## Procedure
+## Process
 
 1. **Derive the PC reference** for the epic (PC-first, above).
 2. **Direction A — epic against PC.** For every story/AC claim, locate the matching PC point. Classify each into Contradicts (1) or Not traceable (2). Aim for complete coverage — every claim checked.
@@ -51,7 +51,7 @@ Every finding lands in exactly one category and cites the PC (`§n`) or the spec
 
 Categorized findings for the BA to settle — grouped by the five categories, each citing the PC section / defined-epic story, with the decision at stake in one line. No edits, no rewrites of stories or PC. Once the BA settles a finding, the actual change is applied through `pc-update` / `notion-update` under Refine — not by this skill.
 
-## What this skill does NOT do
+## What NOT to do
 
 - Does not edit the PC, the stories, or the AC — reviews only.
 - Does not resolve a real conflict silently — surfaces it for the BA.

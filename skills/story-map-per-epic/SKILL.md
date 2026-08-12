@@ -5,15 +5,15 @@ description: "Build a Miro-importable xlsx story map for one epic from the appro
 
 # /story-map-per-epic
 
-## Purpose
+## What it does
 
 Turn the approved decomposition of **one epic** into an xlsx that Miro imports as sticky notes, so the BA can arrange and plan the stories on a board. Parent → child traceability is preserved by the layout: each column is a parent WBS story, the stickies under it are its child stories.
 
-## When to invoke
+## When to use
 
 After `decompose-wbs-epic` output is approved, when the BA wants the stories as a Miro board for planning.
 
-## Input
+## Inputs
 
 The approved `decompose-wbs-epic` output for one epic. From it, read:
 

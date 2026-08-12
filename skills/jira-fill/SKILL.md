@@ -5,11 +5,11 @@ description: "Write finalized requirements (story + AC) into Jira tickets from a
 
 # /jira-fill
 
-## Purpose
+## What it does
 
 Write finalized requirements (story + Acceptance Criteria) into Jira tickets. Runs after `jira-split` has created the empty ticket structure: the BA pastes the epic's Notion markdown (all stories with their AC), and the skill fills each story's content into its matching ticket. Also serves a single-ticket update when one requirement changes. Pure transfer of what the BA provides — no validation, no DoR check, no flagging, no rewriting.
 
-## When to invoke
+## When to use
 
 - After `jira-split` — to fill the epic's empty tickets with their story + AC.
 - When a requirement already in Jira changed — to update one ticket.
@@ -56,7 +56,7 @@ Print, per story: the formatted title + description (story + AC), and — if the
 - Read before write; approval before write (show the match plan, then write). Read-only MCP (fetch) runs without approval.
 - Anti-hallucination: write only what the MD contains. Do not add AC, fields, labels, or assignees not present in the input.
 
-## What this skill does NOT do
+## What NOT to do
 
 - Does not check DoR or flag missing fields.
 - Does not write or rewrite AC — the AC is provided final in the MD.

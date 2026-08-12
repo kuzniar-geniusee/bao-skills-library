@@ -3,7 +3,7 @@ name: traceability-matrix
 description: "Build a traceability and progress matrix from Jira data in xlsx format to show epic, story, subtask, status, and progress coverage. Use for project progress snapshots, coverage reviews, and sprint reporting."
 ---
 
-# Traceability Matrix
+# /traceability-matrix
 
 Builds a traceability and progress matrix in xlsx format. Gives full coverage visibility across the project, what is defined, what is in Jira, and what the current delivery status is.
 
@@ -11,7 +11,7 @@ Reads Jira directly via Atlassian MCP to pull ticket data, statuses, and progres
 
 ---
 
-## When to Use
+## When to use
 
 - At any point when you need a cross-cutting view of project progress
 - Before a status call or sprint review to prepare a progress snapshot
@@ -28,7 +28,7 @@ Reads Jira directly via Atlassian MCP to pull ticket data, statuses, and progres
 
 ---
 
-## Input
+## Inputs
 
 ```
 /traceability-matrix
@@ -42,7 +42,7 @@ If project key is missing, ask before pulling data:
 
 ---
 
-## Steps
+## Process
 
 **Step 1, Pull data from Jira via MCP**
 

@@ -11,7 +11,7 @@ Cross-project quality scan across all requirements sources — Confluence specif
 
 This is a project-level scan, not a single-story review. Use `/ac-validation` for per-story AC depth checks.
 
-## Input
+## Inputs
 
 - Jira project key (required)
 - Confluence space key or parent page URL (required)

@@ -11,7 +11,7 @@ Reviews Acceptance Criteria for a user story or a set of stories against complet
 
 Complements `/invest-check` (which evaluates story-level quality) — this skill goes deeper into AC content.
 
-## Input
+## Inputs
 
 - User story with AC (Confluence page URL, Jira ticket key, or pasted content)
 - Optional: scope note — "check only happy path coverage" or "focus on edge cases"

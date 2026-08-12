@@ -5,7 +5,7 @@ description: "Take one epic from WBS split to Jira ticket structure. Two phases.
 
 # /jira-split
 
-## Purpose
+## What it does
 
 Turn one epic's WBS split into the matching Jira ticket structure. One skill, two phases:
 
@@ -16,7 +16,7 @@ The skill auto-detects which phase to run from the state of the WBS Jira column.
 
 This skill is structure only. It never writes the requirement (story + AC) into a ticket — that is `jira-fill`.
 
-## When to invoke
+## When to use
 
 - After `decompose-wbs-epic` and `ears-ac`, when moving an epic's stories into Jira.
 - One epic per invocation.
@@ -131,7 +131,7 @@ Rules:
 - Read before write; approval before write. Read-only MCP (Drive read, Jira fetch) runs without approval.
 - Anti-hallucination: never invent ticket names (read from D), child story names (read from MD), field values (inherit or `[TBD]`), assignees (from the Assignee mapping only — never guess a username), or links (only `Issue split` between a split's siblings — no `Cloners`, no `Relates`, no other type).
 
-## What this skill does NOT do
+## What NOT to do
 
 - Does not decide the split — the BA records it in WBS column D; Phase A only proposes, Phase B only reads.
 - Does not write story/AC into descriptions — that is `jira-fill`.

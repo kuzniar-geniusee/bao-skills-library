@@ -3,7 +3,7 @@ name: design-validation
 description: "Validate a designer's flow/screens PDF against the Product Context and report findings only — reviews, never edits. Use when the BA asks whether a flow is correct, complete, and matches product logic — e.g. 'провалідуй цей флоу', 'звір дизайн з PC', 'перевір мокап проти вимог'. Works PC-first: derive what the flow should contain from the PC before looking at the design, then validate flow structure, then screens; every finding cites the PC, and anything the PC is silent on is flagged to confirm, never accepted or fixed against generic UX. Two stages inside this one skill: Stage 1 (default) triages findings for the BA to settle; Stage 2 — paste-ready per-frame designer comments — runs ONLY when, inside an active validation, the BA explicitly asks ('випиши коментарі', 'give me the Figma comments'), built from the settled findings, never auto-advanced to. For generating a flow from requirements, use flow-build instead."
 ---
 
-# Design Validation
+# /design-validation
 
 Validate a designer's flow (PDF) against the Product Context and return a structured list of findings. The Product Context is the single source of truth for what the flow should contain. This skill reviews only — the designer edits the diagram.
 
@@ -21,7 +21,7 @@ Validate a designer's flow (PDF) against the Product Context and return a struct
 
 The order below exists to prevent a specific failure: validating screens against *generic UX expectations* instead of against what the Product Context actually requires (e.g. accepting or inventing a login step the PC never asked for). The fix is to build the expectation from the PC **before** looking at the design, then validate flow structure before screens. Do not skip or reorder these phases.
 
-## Procedure
+## Process
 
 ### Phase 0 — Build the reference from the Product Context (do NOT open the PDF yet)
 

@@ -3,7 +3,7 @@ name: elicitation-prep
 description: "Generate a structured elicitation question list for project-wide, epic, sprint, or topic-specific scope using Project Knowledge and optional source artifacts. Use before client meetings, discovery calls, or refinement sessions."
 ---
 
-# Elicitation Prep
+# /elicitation-prep
 
 Generates a structured question list for a client meeting or workshop. Questions are grouped by topic and prioritized by what needs to be resolved before requirements can be written. Prevents blank-page paralysis before sessions and ensures nothing critical is missed.
 
@@ -11,7 +11,7 @@ Reads project context from Project Knowledge automatically. Add the meeting topi
 
 ---
 
-## When to Use
+## When to use
 
 - Before any client meeting where requirements or scope will be discussed
 - Before a refinement session where a feature is not yet clear enough
@@ -42,7 +42,7 @@ Examples:
 
 ---
 
-## Steps
+## Process
 
 **Step 1, Read project context**
 

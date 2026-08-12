@@ -11,7 +11,7 @@ Generates and validates Non-Functional Requirements (NFRs) for a feature, epic, 
 
 Use when: starting a new epic, preparing for architecture review, or when dev/QA flags missing NFRs during refinement.
 
-## Input
+## Inputs
 
 - Feature or epic description (Confluence URL, Jira epic key, or pasted text)
 - Optional: known constraints (SLA, user volume, regulatory requirements, tech stack limitations)

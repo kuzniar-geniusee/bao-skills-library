@@ -3,7 +3,7 @@ name: changelog
 description: "Write a single change-log item as a ready-to-paste horizontal row matching the project's live Change Log sheet. Trigger ONLY when the BA explicitly asks for it — e.g. 'напиши айтем в чейнджлог', 'write a changelog item', 'додай це в change log'. Do NOT trigger merely because a decision or source arrived. Fills content columns A–M (A Change_ID as a placeholder, L Requestor as <Client>/Geniusee, K Jira ticket = TBD); leaves Responsible, Status, Approval Date, Jira, and all effort columns untouched. A Change Request reuses the current baseline story+AC verbatim (Jira/Notion if the story is described there, else WBS) and marks the delta (strike removed requirements, list new ones). Delivers the item as a horizontal markdown row in chat. Does not edit the Product Context — that is pc-update."
 ---
 
-# Changelog Item
+# /changelog
 
 Write one change-log item from a decided change, as a row matching the project's live **Change Log** sheet. Output is a **horizontal** markdown row the BA pastes in. The skill writes content columns only and never touches process-metadata or estimation columns.
 

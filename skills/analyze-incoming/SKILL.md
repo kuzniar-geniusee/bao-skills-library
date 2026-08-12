@@ -3,7 +3,7 @@ name: analyze-incoming
 description: "Explain an incoming item and route it to the next action. Use when the BA pastes a client change-log comment, a client message, a transcript snippet, a PRD section, or a newly proposed feature and asks what it means and what to do — e.g. 'про що це і що робити', 'проаналізуй цей коментар', 'поясни цей айтем'. Cross-checks the item against the current Product Context / WBS, states the real decision at stake, and routes it (apply directly · ask the client · bring to call · no action · or whatever fits). When the route is a client question, it drafts that one question. Does NOT edit the Product Context or write the changelog itself — those are separate, explicitly-requested steps handled by pc-update and the changelog skill."
 ---
 
-# Analyze Incoming — explain & route
+# /analyze-incoming
 
 Take one incoming item and do two things: explain what it actually is and the real decision behind it, then route it to the next action. This is the front-door reasoning step that *precedes* any commit to the Product Context or changelog — it grounds the item, makes sense of it, and decides where it goes.
 
@@ -16,7 +16,7 @@ Take one incoming item and do two things: explain what it actually is and the re
 
 One or more incoming items, any type: client change-log comment, client Slack/board message, transcript snippet, PRD section, newly proposed feature. Plus read access to the current Product Context (and the WBS where row numbers matter).
 
-## Procedure
+## Process
 
 ### 1. Ground the item
 

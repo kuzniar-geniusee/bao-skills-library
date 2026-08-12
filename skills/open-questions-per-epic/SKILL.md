@@ -3,7 +3,7 @@ name: open-questions-per-epic
 description: "Generate a per-epic open-questions register as an `.xlsx` (one sheet per epic), grounded in the Product Context and WBS. Use when preparing open questions for a specific epic before refinement — e.g. 'збери open questions по User Management', 'питання по епіку Group Management', 'open questions per epic'. Produces the columns User Story · Address · Priority · Questions · Answer · Status, one atomic question per row, prioritized and sorted most-blocking-first, with each question routed (Client vs Internal) via the Address tag. For broad project-wide or kickoff session prep in markdown, use the elicitation-prep skill instead."
 ---
 
-# Open Questions per Epic
+# /open-questions-per-epic
 
 Generate a per-epic open-questions register as an `.xlsx`. Each sheet is one epic; each row is one open question hung off a User Story, routed to whoever resolves it, prioritized, and worded so it can be answered directly. This is refinement-stage work on specific epics — grounded in what the Product Context and WBS already decide, so the list contains only genuine gaps.
 
@@ -33,7 +33,7 @@ Generate a per-epic open-questions register as an `.xlsx`. Each sheet is one epi
 | **Answer** | Blank — filled when the question is resolved. |
 | **Status** | `Open` by default. |
 
-## Procedure
+## Process
 
 ### 1. Ground in the Product Context and WBS
 

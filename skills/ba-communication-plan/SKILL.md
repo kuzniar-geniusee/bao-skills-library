@@ -3,7 +3,7 @@ name: ba-communication-plan
 description: "Generate `comm_plan.md` for BA communication on a delivery project using `01_project_context.md`, kickoff notes, PM messages, stakeholder context, and known meeting cadence. Use during project setup or onboarding to define BA-relevant communication tools, meetings, and stakeholder contact matrix. If no cadence is defined, generate a default Scrum meeting set, clearly flag it as default, and ask one follow-up about adjustments or client-specific communication constraints."
 ---
 
-# BA Communication Plan
+# /ba-communication-plan
 
 Generate `comm_plan.md` as the BA-specific communication plan for the project. Cover only communication activities where the BA is directly involved.
 
@@ -22,7 +22,7 @@ Generate `comm_plan.md` as the BA-specific communication plan for the project. C
 3. PM agreements — for escalation path
 4. Project Charter — for context
 
-## Procedure
+## Process
 
 ### 1. Extract context
 

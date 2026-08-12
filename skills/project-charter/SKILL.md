@@ -3,7 +3,7 @@ name: project-charter
 description: "Generate `01_project_context.md` for Project Knowledge from kickoff notes, PM messages, WBS fragments, onboarding notes, transcripts, or free-text project descriptions. Use at the start of a new project or when onboarding into an existing one to capture project overview, business goal, scope, users, constraints, risks, and project identifiers. Ask up to 3 targeted questions only when business goal or high-level scope is unclear."
 ---
 
-# Project Charter
+# /project-charter
 
 Generate `01_project_context.md` as the foundational project context file for Project Knowledge. Use it as the baseline reference for future BA work on the project.
 
@@ -17,7 +17,7 @@ Any combination of:
 
 On Geniusee delivery projects after discovery — S&V is the primary input, WBS provides scope structure.
 
-## Procedure
+## Process
 
 ### 1. Parse the input
 

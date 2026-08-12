@@ -12,7 +12,7 @@ Structures project context, governance rules, and tool configuration into a form
 
 Use when: project setup or onboarding, before the first refinement session.
 
-## Input
+## Inputs
 
 Primary (read from Project Knowledge via MCP or pasted):
 - `01_project_context.md` — project name, methodology, team, constraints

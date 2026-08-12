@@ -5,11 +5,11 @@ description: "Decompose a WBS epic into smaller, independent, vertical user stor
 
 # /decompose-wbs-epic
 
-## Purpose
+## What it does
 
 Turn one WBS epic into smaller, valuable **vertical** user stories — INVEST-compliant — each traceable to the parent WBS story it came from. Story statements only; acceptance criteria are added afterwards by `ears-ac`, and the story-map xlsx is produced by a separate skill.
 
-## When to invoke
+## When to use
 
 When the BA wants to break a WBS epic into implementation-ready stories, before writing AC. Works on any epic in the WBS.
 

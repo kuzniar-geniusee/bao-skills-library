@@ -3,7 +3,7 @@ name: pc-update
 description: "Produce OLD→NEW find/replace edits that bring an existing `product_context.md` to its current decided state from one or more new sources. Trigger ONLY when the BA explicitly asks for find/replace / PC edits — e.g. 'дай find/replace по PC', 'онови product context через find and replace', 'зроби правки в PC по цьому'. Do NOT trigger merely because a new source arrived — analysis and discussion of a source come first; edits are a separate, explicitly-requested commit step. Purely updates the Product Context; does not touch changelog, trackers, or stories. For building a Product Context from scratch use pc-from-zero instead."
 ---
 
-# Product Context — Update (find/replace)
+# /pc-update
 
 Produce targeted OLD→NEW edits that bring an existing `product_context.md` to its current decided state. The BA applies them by find/replace in VS Code and re-uploads the updated file. The PC holds the *fixed decision* — history goes elsewhere, never into the document.
 
@@ -23,7 +23,7 @@ This gate exists because editing is a deliberate commit step, separate from thin
 - The current `product_context.md` — read it in full first. It is large; never edit from memory.
 - One or more new sources, any type: transcript, call decisions, client answers, PRD, approved-feature list. Flexible by design — multiple sources can be processed in one pass. What matters is that the effect of every source on the PC is fully analyzed, not the number of sources.
 
-## Procedure
+## Process
 
 ### 1. Read both, then cross-check
 

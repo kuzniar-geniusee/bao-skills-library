@@ -3,7 +3,7 @@ name: flow-build
 description: "Build editable stakeholder-review flowcharts for an epic in FigJam, one section per flow, from the delivery roadmap (which flows) and the Product Context (the flow content). Use when the BA wants to generate flows/flowcharts for review — e.g. 'збудуй флоучарти для епіку', 'зроби флоу для Course Creation', 'намалюй флоу CRS у Figma', 'build the flowcharts for this epic', 'flow-build for GRP'. The BA pastes the roadmap and names the epic + Flow ID prefix; this skill filters the roadmap to that prefix, derives each flow strictly from the Product Context (PC silence → OQ, never invented), and writes one FigJam file with one titled section per flow. This is the counterpart to design-validation: design-validation checks an existing flow against the PC; flow-build generates the flow from the PC. Does NOT validate an existing design and does NOT edit the PC."
 ---
 
-# flow-build
+# /flow-build
 
 Generate editable **stakeholder-review flowcharts** for one epic into a single FigJam file — one section per flow. This skill writes to Figma; it does not validate or edit requirements.
 
@@ -31,7 +31,7 @@ One editable **FigJam** file for the epic, containing one **separate section per
 
 ---
 
-## Procedure
+## Process
 
 ### Step 1 — Select the flows (roadmap, deterministic)
 

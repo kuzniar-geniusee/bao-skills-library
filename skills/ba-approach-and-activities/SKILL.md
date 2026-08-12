@@ -23,7 +23,7 @@ Wiki gap analysis shows: governance, communication, and stakeholder skills cover
 
 This skill closes that gap.
 
-## Input
+## Inputs
 
 Primary (read from Project Knowledge via MCP or pasted):
 - `01_project_context.md` — project name, methodology, phases, team

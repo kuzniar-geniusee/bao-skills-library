@@ -3,7 +3,7 @@ name: call-summary
 description: "Write a client-facing summary of an elicitation or working session from its transcript. Use when the BA asks for a meeting/call summary after a session — e.g. 'напиши саммері по дзвінку', 'саммері після елісітації', 'summary зустрічі для клієнта'. The transcript is always the input; a prepared question list and a change log are optional extra inputs. Produces a shareable markdown summary: header + overview + decisions grouped by theme + (a Q&A table only when the session ran through a prepared question list) + open items + change-log delta. Never attributes statements to a speaker, and uses canonical role names only. For an internal extract of requirements / action items, use meeting-to-requirements instead."
 ---
 
-# Call Summary
+# /call-summary
 
 Write a client-facing summary of an elicitation or working session, suitable to share with the client. Built from the session transcript, it records what was decided and what remains open, in a clean, professional, decision-focused form.
 

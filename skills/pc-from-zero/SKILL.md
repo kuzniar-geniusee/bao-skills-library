@@ -3,7 +3,7 @@ name: pc-from-zero
 description: "Build a project's Product Context document (`product_context.md`) from scratch by incrementally synthesizing BA-provided sources (WBS, discovery transcripts, PRD, kickoff notes, client answers) into one traceable product source-of-truth. Use whenever there is NO product context file yet and you are creating the initial skeleton + first population, e.g. 'наповнити product context з 0', 'build the product context', 'почнемо product context, ось перше джерело'. Owns the empty §1–§12 skeleton, the per-source incremental loop, inline source traceability, and finalize. Once the file already exists and a NEW source must be folded into it, use the pc-update skill instead — not this one."
 ---
 
-# Product Context — From Zero
+# /pc-from-zero
 
 Build `product_context.md` as the single product source-of-truth for a project, synthesized only from sources the BA provides. The document grows source by source; this skill owns the empty skeleton and the first build through to a usable draft.
 
@@ -29,7 +29,7 @@ These are the reason the document stays trustworthy — hold them on every sourc
 5. Cite sources precisely. Every statement carries a traceable inline reference, e.g. `(Source X §3)`, `(Source Y row 88)`, `(Source Z, 00:14:22)`.
 6. Preserve domain terms exactly as a source spells them. Once a glossary term appears in a source, do not translate or rename it.
 
-## Procedure
+## Process
 
 ### 1. Create the skeleton
 

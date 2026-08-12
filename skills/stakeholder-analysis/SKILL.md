@@ -3,11 +3,11 @@ name: stakeholder-analysis
 description: "Generate `02_stakeholders.md` from `01_project_context.md`, kickoff notes, PM messages, org charts, or free-text stakeholder descriptions. Use after the Project Charter or when onboarding onto an existing project to map internal and client stakeholders, decision authority, responsibilities, communication context, and a BA-focused RACI. Create the internal version first, keep Power/Interest for BA use only, and ask whether an external-facing version is also needed."
 ---
 
-# Stakeholder Analysis
+# /stakeholder-analysis
 
 Generate `02_stakeholders.md` as the structured stakeholder map for the project. This file should support communication planning, approvals, escalation, and BA alignment.
 
-## Input
+## Inputs
 
 Accept any of the following:
 - `01_project_context.md`
@@ -18,7 +18,7 @@ Accept any of the following:
 
 If the project has separate streams, map stakeholders per stream where relevant.
 
-## Procedure
+## Process
 
 ### 1. Extract stakeholders
 

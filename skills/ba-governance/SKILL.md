@@ -3,7 +3,7 @@ name: ba-governance
 description: "Generate `governance.md` for BA governance on a delivery project using `01_project_context.md`, team structure, tools, approval expectations, and known change-control agreements. Use during project setup or onboarding to define prioritization approach, approvals approach, change control process, and default DoR/DoD. Generate section by section, ask targeted questions only when needed for the current section, and clearly flag all defaults for team alignment."
 ---
 
-# BA Governance Approach
+# /ba-governance
 
 Generate `governance.md` as the BA governance baseline for how requirements are prioritized, approved, changed, and considered ready or done on the project.
 
@@ -23,7 +23,7 @@ Generate `governance.md` as the BA governance baseline for how requirements are 
 
 If a governance rule is not known yet, generate a sensible default and clearly flag it for validation.
 
-## Procedure
+## Process
 
 Generate the document section by section. Do not ask all clarification questions upfront.
 
