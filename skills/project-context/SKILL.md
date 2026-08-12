@@ -39,7 +39,7 @@ Before generating, verify the project summary and key constraints are clear enou
 
 ### 3. Generate the document
 
-Use the template below. Mark unknown values as `TBD`.
+Use the template below. The **Conflict Resolution Rule** and **Conventions** are framework standards — reproduce them as written; only add a project-specific point or adjust one where the project genuinely deviates. Everything in `[brackets]` is a project value to fill in or mark `TBD`.
 
 ```markdown
 # Project Context — [Project Name]
@@ -77,28 +77,36 @@ _Last updated: [date]_
 ## Project Knowledge — Source Map
 | Logical name | Actual file in Project Knowledge | Origin | Trust Level | Notes |
 |---|---|---|---|---|
-| Product Context | [filename] | [origin] | Primary source of truth for product | [what it holds] |
-| Project Context | [filename] | [origin] | Delivery context | This file. |
-| Stakeholders | [filename] | [origin] | Baseline | [roles, RACI] |
-| Tech Context | [filename] | [origin] | Baseline | [stack, integrations] |
-| Standards | [filename] | [origin] | Baseline | [story format, DoR / DoD] |
-| WBS | [filename] | [origin] | Scope baseline | [source for row numbers] |
+| Product Context | [filename] | [origin] | Primary source of truth for product | Full functional scope, roles, permissions, glossary. First reference for any product question. |
+| Project Context | [filename] | [origin] | Delivery context | This file. Delivery-side constraints, risks, identifiers, source map, conventions. |
+| Stakeholders | [filename] | [origin] | Baseline | Roles, decision authority, contacts, RACI. |
+| Tech Context | [filename] | [origin] | Baseline | Stack, integrations, architecture, domain model, technical constraints. |
+| Standards | [filename] | [origin] | Baseline | Story format, EARS AC, DoR, DoD, task split, change control. |
+| WBS | [filename] | [origin] | Scope baseline | Scope baseline; source for the WBS row numbers cited in the Product Context. |
 
 ## Roles [(client-approved naming, session / date if any)]
 [Canonical role names, with a mapping note from any original / internal labels used in source artifacts.]
 
 ### Conflict Resolution Rule
-1. **[Primary file] is the canonical source** for [its domain]. In conflict with any other file — it wins.
-2. [WBS row citations take precedence over narrative interpretation.]
-3. [Delivery-side files are authoritative within their own domain and do not override the primary for product decisions.]
-4. [New decisions are added to the primary first, then propagated to delivery files.]
-5. [WBS <-> PC discrepancies are surfaced to the BA before applying — never reconciled silently.]
+1. **Product Context is the canonical source** for product, roles, permissions, glossary, and scope. In conflict with any other file — Product Context wins.
+2. **WBS row citations in Product Context** take precedence over any narrative interpretation.
+3. **Delivery-side files** (Stakeholders, Tech Context, Standards) are authoritative within their domain (team, tech stack, process). They do not override Product Context for product decisions.
+4. **New decisions** from elicitations or client communications are added to Product Context first, then propagated to delivery files if needed.
+5. WBS ↔ PC discrepancies are surfaced to the BA before applying — never reconciled silently. Precedence (points 1–2) decides the outcome; this point governs the procedure.
+6. **Engineering / stack / data-model facts**: the engineering technical specification is canonical; the Tech Context file is its BA-facing reconciled digest. When they disagree on an engineering fact, the tech spec wins and triggers a Tech Context reconcile pass (new ADR · model change · epic kickoff). Product decisions still follow Product Context (point 1): where the tech spec and Product Context conflict on a product decision, PC wins and the divergence is surfaced to the BA, never reconciled silently.
 
 ### Conventions
-- **WBS row references**: [format, e.g. `R<number>`; note that numbers are stable within a WBS version and must be reviewed on re-baseline]
-- **Source citations**: [format, e.g. `Sx §<section>`; note these are inputs to BA synthesis, not files in Project Knowledge]
-- **Story references**: [by title, not ordinal number]
-- **`proposed` / `TBD` tags**: [each must have a matching Open Question that clears the tag]
+- **WBS row references**: cited as `R<number>` (e.g. `R152`, `R74`). Numbers are stable within a WBS version; if WBS is re-baselined, references must be reviewed.
+- **Source citations in Product Context**: `Sx transcript HH:MM:SS` or `Sx §<section>`, where the sources are listed in the Product Context source map. These sources are inputs to BA synthesis, NOT files in Project Knowledge — Project Knowledge contains synthesised outputs only.
+- **Story references**: by title, not ordinal number — numbers drift on renumbering.
+- **`proposed` / `TBD` tags**: any AC / requirement element tagged proposed or TBD must have a concrete Open Question whose answer clears the tag; no orphan tags without an OQ.
+- **Dates**: ISO `YYYY-MM-DD` in artifacts and changelog.
+- **Skill fidelity**: for any activity that has a dedicated skill, follow that skill strictly and do not deviate (decomposition → decompose-wbs-epic; etc.). **Any requirement (story + AC) MUST be produced with ears-ac — never write AC freehand, not even for a single story or a quick edit.**
+- **Surfaces**: operate only on the approved surfaces defined in the Product Context; do not invent new ones. `email` is a channel, not a surface. Each story carries a one-line Surface note.
+- **No source citations in client-facing requirement / AC text**: the story / AC text that goes to the tracker carries no source references. Internal traceability (WBS-AC verbatim block under the parent, PC source-map) stays separate and untouched.
+- **No client personal names** in requirements (stories / AC), changelog, or any client-facing artifact (call summaries, shared OQ lists, flowcharts, design comments). The client company name is allowed. Internal-only artifacts may name freely; question formulations may name when needed.
+- **Changelog trigger**: write a changelog item when an output introduces a change to existing baselined scope (Change Request) or a new feature (New Feature Request). A clarification that changes nothing baselined → no item.
+- **Client questions**: written to a quality bar — one clear goal per question (know the answer you want before writing), atomic (one decision each), all filler stripped, your stance shown (understand / clarify / challenge), formed from every angle (user / admin / system), ordered most-blocking-first, and the full set surfaced at once, not drip-fed. Full rules live in elicitation-prep / open-questions-per-epic.
 ```
 
 ### 4. Add BA review note
