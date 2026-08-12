@@ -69,17 +69,23 @@ Use a short follow-up note such as:
 ## Output template
 
 ```markdown
-# Stakeholder Map — [Project Name]
+# Stakeholders — [Project Name]
 _Last updated: [date]_
-_⚠ Internal document — Power/Interest columns for Geniusee team only_
+_⚠ Internal document — Power/Interest columns for the delivery team only_
 
-## Stakeholder Register
+## [Client] (Client)
 
-| Name | Role | Organization | Contact | Time Zone | Power | Interest | Responsibilities | Concerns / Notes |
-|---|---|---|---|---|---|---|---|---|
-| [Name] | [Role title] | [Client / Geniusee / Vendor] | [Slack / email] | [GMT+x] | H / L | H / L | [What they own on the project] | [Working style, concerns, watch-outs] |
+| Name | Role | Contact | Time Zone | P/I | Notes |
+|---|---|---|---|---|---|
+| [Name] | [Role] | [Slack / email] | [GMT±x] | H/H | [Decision authority, working style, availability, approvals, watch-outs] |
 
-## RACI Matrix
+## [Delivery Org] (Delivery Team)
+
+| Name | Role | Contact | Notes |
+|---|---|---|---|
+| [Name] | [Role] | [email] | [What they own, escalation point, availability] |
+
+## RACI
 
 | Deliverable | BA | PO / Client | PM | Tech Lead | Dev Team | QA |
 |---|---|---|---|---|---|---|
@@ -89,8 +95,7 @@ _⚠ Internal document — Power/Interest columns for Geniusee team only_
 | UAT | R | I | I | — | — | A |
 | Sprint demo / review | R | I | I | C | C | A |
 
-> Adjust roles and approvers based on actual project structure.
-> R = Responsible, A = Accountable, C = Consulted, I = Informed
+> R = Responsible, A = Accountable, C = Consulted, I = Informed. Adjust to the actual project structure.
 
 ## Influence / Interest Notes
 
@@ -98,10 +103,6 @@ _⚠ Internal document — Power/Interest columns for Geniusee team only_
 - **High Power / Low Interest** → keep satisfied
 - **Low Power / High Interest** → keep informed
 - **Low Power / Low Interest** → monitor with minimal effort
-
-## Open Questions
-
-- [ ] [Name] — missing: [contact / time zone / decision authority]
 ```
 
 ## Rules

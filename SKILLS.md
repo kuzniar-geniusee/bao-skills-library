@@ -10,7 +10,7 @@ Invoke in any Claude Project chat with `/skill-name`.
 
 | Skill | Status | Phase | Description | Trigger |
 | --- | --- | --- | --- | --- |
-| `/project-charter` | ✅ ready | 1 · Project Setup | Structures kickoff notes / S&V / WBS into the project charter. Output: `01_project_context.md`. | Start of a new project |
+| `/project-context` | ✅ ready | 1 · Project Setup | Structures kickoff notes / S&V / WBS into the delivery-context file — summary, constraints, risks, identifiers, source map, roles, conflict-resolution rule, conventions. Output: `01_project_context.md`. | Start of a new project |
 | `/tech-context` | ✅ ready | 1 · Project Setup | Captures stack, integrations, architecture, constraints, glossary. Output: `03_tech_context.md`. | Need technical grounding for BA work |
 | `/pc-from-zero` | ✅ ready | 1 · Project Setup | Builds the Product Context (product source of truth) from scratch, source by source. Output: `product_context.md`. | No Product Context yet — build it |
 | `/stakeholder-analysis` | ✅ ready | 1 · Project Setup | Maps internal / client stakeholders, decision authority, RACI. Output: `02_stakeholders.md`. | Need a stakeholder map for a project |

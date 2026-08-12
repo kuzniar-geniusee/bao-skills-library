@@ -65,52 +65,54 @@ After generating, explicitly flag:
 # Tech Context — [Project Name]
 _Last updated: [date]_
 
-## Tech Stack
+## Stack
 
 | Layer | Technology | Notes |
 |---|---|---|
 | Frontend | [e.g. TypeScript / React] | [Notes] |
-| Backend | [e.g. Python] | [Notes] |
+| Backend | [e.g. NestJS] | [Notes] |
 | Database | [TBD] | |
-| Infrastructure | [e.g. Cloudflare Pages] | |
-| Auth | [e.g. Magic link / OAuth] | |
-| PM Tool | [e.g. Jira — project key: EWA] | |
+| Infrastructure | [e.g. DigitalOcean / AWS] | |
+| Auth | [e.g. SSO / OAuth] | |
+| PM Tool | [e.g. Jira — project key] | |
 | Design | [e.g. Figma] | |
 
----
-
-## External Integrations & APIs
+## External Integrations
 
 | Integration | Purpose on This Project | Direction | Owner | Constraints / Notes |
 |---|---|---|---|---|
 | [Integration] | [Purpose] | Inbound / Outbound / Bidirectional | [Owner] | [Constraints / notes] |
 
----
-
 ## Architecture Notes
 
 [High-level description of system structure, component relationships, and data flow.]
 
----
+## Domain Model & Data
 
-## Domain Glossary
+[Core entities and their relationships; key data structures. Where the authoritative model lives (e.g. the engineering spec) and what is mirrored here vs fetched on demand.]
 
-| Term | Definition | Synonyms / Abbreviations | Needs Clarification |
-|---|---|---|---|
-| [Term] | [Clear 1–2 sentence definition] | [Alt names] | Yes / No |
+## Design Constraints
 
----
+[UI / UX or platform constraints that shape how features are built — e.g. admin-panel patterns, component limits, accessibility.]
 
-## Key Technical Constraints
+## Technical Constraints
 
 - [Constraint]
 - [Constraint]
 
----
+## MVP Test Coverage
+
+[What is and is not covered by tests for MVP; testing approach or scope.]
 
 ## Open Technical Questions
 
 - [ ] [Question about API, ownership, data flow, stack, or terminology]
+
+## Tech Glossary
+
+| Term | Definition | Synonyms / Abbreviations | Needs Clarification |
+|---|---|---|---|
+| [Term] | [Clear 1-2 sentence definition] | [Alt names] | Yes / No |
 ```
 
 ## Rules
