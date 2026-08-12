@@ -28,7 +28,7 @@ Reads project context from Project Knowledge automatically. Add the meeting topi
  - `epic:<epic-name>` — questions specific to one epic
  - `sprint:<sprint-id>` — questions for upcoming sprint scope
  - `topic:<topic>` — focused topic (e.g. payments, auth)
-- Optional source artifacts: S&V section, WBS epic rows, Notion page URL
+- Optional source artifacts: S&V section, WBS epic rows, Confluence page URL
 
 ## Output filename pattern
 

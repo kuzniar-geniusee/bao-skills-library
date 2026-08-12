@@ -163,7 +163,7 @@ Block and group headers in **bold**; the design link given once near the top, ne
 # House style / formatting
 
 - **must**, never *shall*.
-- **Block and group headers in bold** — blocks (Story, Design, Pre-conditions, Acceptance Criteria, Data Dictionary, Related stories, Out of Scope, Open Questions, Call-sites, Post-conditions) and the meaning-based AC group names alike. No underline or colour (they do not survive a Notion paste).
+- **Block and group headers in bold** — blocks (Story, Design, Pre-conditions, Acceptance Criteria, Data Dictionary, Related stories, Out of Scope, Open Questions, Call-sites, Post-conditions) and the meaning-based AC group names alike. No underline or colour (they do not survive a copy-paste).
 - **Every `TBD` as a code chip** — write `` `TBD` `` so it stands out and survives the paste; never a bare or buried "tbd".
 - **One Design link near the top**, never repeated under each criterion. If the story spans several screens, list them once in the Design block.
 - **No `(provisioning)` tag** — system-side defaults (purchaser_type, default role, default group, seat decrement) are written as ordinary event-driven criteria, no tag.

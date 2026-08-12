@@ -1,6 +1,6 @@
 ---
 name: ba-approach-and-activities
-description: "Generate `ba_approach_and_activities.md` from `01_project_context.md`, `02_stakeholders.md`, `governance.md`, `comm_plan.md`, and team composition. Use during project setup or kickoff to formalize BA role, activities, deliverables, allocation, and mutual commitments with team and client. Includes explicit Service Menu (what BA does / does not do) and Expectations section for kickoff sign-off. Tool set: Asana (execution) + Notion (documentation)."
+description: "Generate `ba_approach_and_activities.md` from `01_project_context.md`, `02_stakeholders.md`, `governance.md`, `comm_plan.md`, and team composition. Use during project setup or kickoff to formalize BA role, activities, deliverables, allocation, and mutual commitments with team and client. Includes explicit Service Menu (what BA does / does not do) and Expectations section for kickoff sign-off."
 ---
 
 # /ba-approach-and-activities
@@ -25,7 +25,7 @@ This skill closes that gap.
 
 ## Inputs
 
-Primary (read from Project Knowledge via MCP or pasted):
+Primary (read from Project Knowledge or pasted):
 - `01_project_context.md` — project name, methodology, phases, team
 - `02_stakeholders.md` — RACI, decision authority
 - `governance.md` — prioritization, approvals, change control
@@ -65,7 +65,7 @@ Inputs found:
 - BA on project: [name + allocation %]
 - Other BAs: [list / none]
 - Phase: [Initiation / Delivery / etc.]
-- Tools: Asana + Notion
+- Tools: [execution tool] + [documentation tool]
 
 Gaps — need BA input:
 - [list of missing values, especially Service Menu items]
@@ -84,16 +84,9 @@ Generate in this order, present each section for BA review:
 6. **Mutual Commitments** (critical — this is the kickoff alignment artifact)
 7. Performance Expectations
 
-### Step 3 — Publish to Notion
+### Step 3 — Generate kickoff agenda block
 
-Create Notion page via MCP:
-- Title: `BA Approach and Activities — [Project Name]`
-- Parent: provided parent page, or ask BA
-- Status: Draft (for kickoff review)
-
-### Step 4 — Generate kickoff agenda block
-
-After publishing, generate a short kickoff agenda block the BA can paste into the kickoff invite or Notion meeting notes:
+After publishing, generate a short kickoff agenda block the BA can paste into the kickoff invite or [documentation tool] meeting notes:
 
 ```
 ### BA Approach & Mutual Commitments — alignment block (15 min)
@@ -107,10 +100,10 @@ Decision needed: sign-off on BA Approach v1.0
 Owner: [BA name]
 ```
 
-### Step 5 — Summary
+### Step 4 — Summary
 
 ```
-✅ BA Approach and Activities published to Notion: [link]
+✅ BA Approach and Activities document generated.
 ✅ Kickoff agenda block generated (above)
 
 Sections with TBD content (requires BA follow-up):
@@ -138,7 +131,7 @@ _Version: 1.0 | Author: [BA name] | Date: [date] | Status: Draft (for kickoff re
 **BA on project:** [name], [allocation %]
 **Other BAs:** [list or "none"]
 
-Full project context: [link to `01_project_context.md` in Notion]
+Full project context: [link to `01_project_context.md` in [documentation tool]]
 
 ---
 
@@ -147,7 +140,7 @@ Full project context: [link to `01_project_context.md` in Notion]
 The Business Analyst on [Project Name] is responsible for:
 
 - Eliciting, analyzing, and specifying business and functional requirements
-- Maintaining requirements traceability across Asana and Notion
+- Maintaining requirements traceability across [execution tool] and [documentation tool]
 - Facilitating refinement sessions and removing scope ambiguity
 - Owning the requirements management process (per `governance.md`)
 - Acting as a thought partner to PO and PM on scope and prioritization decisions
@@ -167,7 +160,7 @@ The BA is **accountable** for requirements quality and **responsible** for analy
 | Requirements Refinement | Backlog grooming, AC validation, INVEST check | Specified requirements | Before sprint planning | BA, Dev Team, PO | Incorrect estimates, false expectations |
 | Requirements Estimation Support | Facilitating estimation, clarifying scope | Refined requirements | Mid-sprint or planning | BA, Dev Team, PM | Sprint overload, missed goals |
 | Terminology Alignment | Maintaining glossary, concept model | Domain knowledge | Throughout project | BA, Team, Client | Different interpretation, rework |
-| Traceability Maintenance | Linking Asana tasks to Notion specs, dependencies | All requirements artifacts | Continuous | BA | Lost context, duplicate work |
+| Traceability Maintenance | Linking [execution tool] tasks to [documentation tool] specs, dependencies | All requirements artifacts | Continuous | BA | Lost context, duplicate work |
 | Change Request Processing | Per `governance.md` change control process | Client request | When requested | BA, PM, PO | Uncontrolled scope creep |
 
 ### 3.2 Special BA Tasks (project-specific)
@@ -205,7 +198,7 @@ The BA is **accountable** for requirements quality and **responsible** for analy
 - INVEST validation and story decomposition
 - Subtask generation
 - Meeting notes processing
-- Documentation in Notion (BRD, specs, glossary, concept model)
+- Documentation in [documentation tool] (BRD, specs, glossary, concept model)
 - Requirements traceability maintenance
 - Gap analysis and consistency checks
 - Data analysis and reverse-engineering
@@ -217,16 +210,16 @@ The BA is **accountable** for requirements quality and **responsible** for analy
 
 | Deliverable | Where | When | Owner |
 |---|---|---|---|
-| User stories + AC | Asana (tasks) | Per sprint | BA |
-| Feature specifications | Notion | Before refinement | BA |
-| BRD / SRS | Notion | Per phase or epic | BA |
-| Glossary | Notion | Continuous | BA |
+| User stories + AC | [execution tool] (tasks) | Per sprint | BA |
+| Feature specifications | [documentation tool] | Before refinement | BA |
+| BRD / SRS | [documentation tool] | Per phase or epic | BA |
+| Glossary | [documentation tool] | Continuous | BA |
 | Process models (BPMN, flows) | Miro | As needed | BA |
-| Data dictionary | Notion | When data-heavy work starts | BA |
-| Meeting notes | Notion | Within 24h of meeting | BA |
-| Change requests | Asana (CR label) + Notion | When changes occur | BA |
-| Open questions log | Notion | Continuous | BA |
-| Risks & Assumptions log | Notion | Continuous | BA |
+| Data dictionary | [documentation tool] | When data-heavy work starts | BA |
+| Meeting notes | [documentation tool] | Within 24h of meeting | BA |
+| Change requests | [execution tool] (CR label) + [documentation tool] | When changes occur | BA |
+| Open questions log | [documentation tool] | Continuous | BA |
+| Risks & Assumptions log | [documentation tool] | Continuous | BA |
 
 ---
 
@@ -252,7 +245,7 @@ This section is the kickoff alignment artifact. Walk through it with team and cl
 
 - Own requirements elicitation, specification, refinement, traceability
 - Facilitate refinement and clarification sessions
-- Maintain documentation in Notion as single source of truth
+- Maintain documentation in [documentation tool] as single source of truth
 - Generate user stories with AC ready for development per DoR
 - Process change requests per `governance.md`
 - Provide weekly BA progress visibility to PM
@@ -301,7 +294,7 @@ BA performance on this project will be assessed against:
 - **Requirements quality:** % of stories meeting DoR before sprint planning (target: ≥ 90%)
 - **Refinement readiness:** % of stories ready for grooming on schedule (target: ≥ 80%)
 - **Change responsiveness:** time from CR submission to impact analysis (target: ≤ 2 business days)
-- **Documentation freshness:** Notion specs updated within 24h of any decision
+- **Documentation freshness:** [documentation tool] specs updated within 24h of any decision
 - **Client satisfaction:** assessed at end of each release / phase
 - **Team feedback:** assessed at sprint retrospectives
 
@@ -337,17 +330,3 @@ Full performance assessment process: TBD — link to `ba_performance_assessment.
 - Service Menu must reflect actual project reality — if BA is genuinely doing PM work on this project (common in small teams), include it transparently rather than denying it
 - "What BA WILL NOT do" section is critical — push back if BA tries to skip it
 - Mutual Commitments section must be presented at kickoff — generate the agenda block in Step 4 to support this
-
-## MCP Path
-
-Input: Notion MCP → read `01_project_context.md`, `02_stakeholders.md`, `governance.md`, `comm_plan.md` pages
-Output: Notion MCP → `create_page` in target Notion space
-Secondary: Asana MCP → create kickoff task with link to Notion page and Mutual Commitments agenda
-
-## MCP Unavailable Fallback
-
-If MCP is not accessible:
-1. Ask BA to paste content of related documents directly
-2. Generate document as markdown in chat
-3. BA publishes manually to Notion
-4. Note: "MCP unavailable — manual publishing required"

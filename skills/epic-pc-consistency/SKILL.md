@@ -1,13 +1,13 @@
 ---
 name: epic-pc-consistency
-description: "Validate a decomposed epic (stories + AC) against the Product Context and against other already-defined epics — reviews only, never edits. PC-first: derive from the PC what the epic must contain before reading the epic, then check both directions (the epic contradicting or not traceable to the PC, and PC decisions the epic fails to cover), cross-epic duplication/clash against the defined epics the BA provides, and internal contradictions within the epic itself. Every finding cites the PC; anything the PC is silent on is flagged to confirm, never resolved against generic assumptions. Produces categorized findings for the BA to settle — fixes go through pc-update / notion-update in Refine, not here. Use before refinement to check a whole epic's requirements against the source of truth. Trigger: 'звір епік з PC', 'провалідуй вимоги епіку', 'check epic against PC', 'epic consistency check'. For AC completeness of a single story use ac-validation; for designs use design-validation."
+description: "Validate a decomposed epic (stories + AC) against the Product Context and against other already-defined epics — reviews only, never edits. PC-first: derive from the PC what the epic must contain before reading the epic, then check both directions (the epic contradicting or not traceable to the PC, and PC decisions the epic fails to cover), cross-epic duplication/clash against the defined epics the BA provides, and internal contradictions within the epic itself. Every finding cites the PC; anything the PC is silent on is flagged to confirm, never resolved against generic assumptions. Produces categorized findings for the BA to settle — fixes go through pc-update in Refine, not here. Use before refinement to check a whole epic's requirements against the source of truth. Trigger: 'звір епік з PC', 'провалідуй вимоги епіку', 'check epic against PC', 'epic consistency check'. For AC completeness of a single story use ac-validation; for designs use design-validation."
 ---
 
 # /epic-pc-consistency
 
 ## What it does
 
-Check one decomposed epic's requirements (stories + AC) against the source of truth and its neighbours. This is to **requirements** what `design-validation` is to **designs**: a PC-first review that reports findings only — it never edits the PC, the stories, or the AC. Fixes are applied afterwards through `pc-update` / `notion-update` under the Refine mode.
+Check one decomposed epic's requirements (stories + AC) against the source of truth and its neighbours. This is to **requirements** what `design-validation` is to **designs**: a PC-first review that reports findings only — it never edits the PC, the stories, or the AC. Fixes are applied afterwards through `pc-update` under the Refine mode.
 
 ## When to use
 
@@ -16,9 +16,9 @@ Check one decomposed epic's requirements (stories + AC) against the source of tr
 
 ## Inputs
 
-- **The epic under review** — its stories + AC (Notion MD), pasted by the BA. This is what gets validated.
+- **The epic under review** — its stories + AC (MD export), pasted by the BA. This is what gets validated.
 - **Product Context** — `/mnt/project/Product_Context.md`. The source of truth. Read the **current** document in full; a rule relevant to the epic may live in any section, not only the one matching the epic's name.
-- **Defined epics** — the stories + AC (Notion MD) of already-defined epics, **provided by the BA**. Needed only for the cross-epic pass, and only for epics that are actually built into requirements — an unbuilt epic cannot clash. The PC alone is **not** enough here: the PC states each rule once and will not reveal that a story duplicates a rule another epic already owns.
+- **Defined epics** — the stories + AC (MD export) of already-defined epics, **provided by the BA**. Needed only for the cross-epic pass, and only for epics that are actually built into requirements — an unbuilt epic cannot clash. The PC alone is **not** enough here: the PC states each rule once and will not reveal that a story duplicates a rule another epic already owns.
 
 ## PC-first — derive before you read
 
@@ -49,7 +49,7 @@ Every finding lands in exactly one category and cites the PC (`§n`) or the spec
 
 ## Output
 
-Categorized findings for the BA to settle — grouped by the five categories, each citing the PC section / defined-epic story, with the decision at stake in one line. No edits, no rewrites of stories or PC. Once the BA settles a finding, the actual change is applied through `pc-update` / `notion-update` under Refine — not by this skill.
+Categorized findings for the BA to settle — grouped by the five categories, each citing the PC section / defined-epic story, with the decision at stake in one line. No edits, no rewrites of stories or PC. Once the BA settles a finding, the actual change is applied through `pc-update` under Refine — not by this skill.
 
 ## What NOT to do
 
@@ -70,4 +70,4 @@ Categorized findings for the BA to settle — grouped by the five categories, ea
 - **`ac-validation`** — inside one story (happy path / edges / errors). This skill is the outward axis: the whole epic against the PC and neighbours. Complementary.
 - **`design-validation`** — same PC-first philosophy, but for designs, not requirements.
 - **`decompose-wbs-epic` / `ears-ac`** — run before this; this checks their combined output against the source of truth.
-- Fixes flow to **`pc-update`** / **`notion-update`** under the Refine mode.
+- Fixes flow to **`pc-update`** under the Refine mode.

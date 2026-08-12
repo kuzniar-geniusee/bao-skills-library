@@ -1,6 +1,6 @@
 ---
 name: changelog
-description: "Write a single change-log item as a ready-to-paste horizontal row matching the project's live Change Log sheet. Trigger ONLY when the BA explicitly asks for it — e.g. 'напиши айтем в чейнджлог', 'write a changelog item', 'додай це в change log'. Do NOT trigger merely because a decision or source arrived. Fills content columns A–M (A Change_ID as a placeholder, L Requestor as <Client>/Geniusee, K Jira ticket = TBD); leaves Responsible, Status, Approval Date, Jira, and all effort columns untouched. A Change Request reuses the current baseline story+AC verbatim (Jira/Notion if the story is described there, else WBS) and marks the delta (strike removed requirements, list new ones). Delivers the item as a horizontal markdown row in chat. Does not edit the Product Context — that is pc-update."
+description: "Write a single change-log item as a ready-to-paste horizontal row matching the project's live Change Log sheet. Trigger ONLY when the BA explicitly asks for it — e.g. 'напиши айтем в чейнджлог', 'write a changelog item', 'додай це в change log'. Do NOT trigger merely because a decision or source arrived. Fills content columns A–M (A Change_ID as a placeholder, L Requestor as <Client>/Geniusee, K Jira ticket = TBD); leaves Responsible, Status, Approval Date, Jira, and all effort columns untouched. A Change Request reuses the current baseline story+AC verbatim (Jira/Confluence if the story is described there, else WBS) and marks the delta (strike removed requirements, list new ones). Delivers the item as a horizontal markdown row in chat. Does not edit the Product Context — that is pc-update."
 ---
 
 # /changelog
@@ -14,7 +14,7 @@ Only produce a change-log item when the BA explicitly asks for one ("напиш�
 ## Inputs
 
 - The decided change — from a call summary, client answer, dev/design sync, or stated decision.
-- The **baseline** — for a Change Request: the refined story+AC from Jira/Notion if the story is already described there, otherwise the WBS row (see Baseline resolution).
+- The **baseline** — for a Change Request: the refined story+AC from Jira/Confluence if the story is already described there, otherwise the WBS row (see Baseline resolution).
 - The existing change log — to match its numbered AC style.
 
 ## Live column layout
@@ -29,7 +29,7 @@ The Change Log sheet columns are:
 |---|---|---|
 | A | Change_ID | Placeholder `Change-NN` — **do not auto-number**. The BA assigns the real sequential number on paste. |
 | B | Date | Date of the decision / call the change came from. `TBD` if not provided — do not invent. |
-| C | Source | Where it came from (call, refinement, dev/design sync, client message, Notion, WBS comment…). `TBD` if unknown. |
+| C | Source | Where it came from (call, refinement, dev/design sync, client message, Confluence, WBS comment…). `TBD` if unknown. |
 | D | Epic Name | The epic from scope. |
 | E | Task / US Description | The user story (see Type logic + Baseline resolution). |
 | F | Acceptance Criteria | The AC, numbered to match the change log's plain-numbered style — **not EARS**. |
@@ -58,7 +58,7 @@ An item exists and is being modified — a phase move (MVP ↔ Future Phase) and
 
 The verbatim "original" is whichever baseline currently governs the story:
 
-1. **Story already described in Jira/Notion** (a refined story+AC exists) → baseline = **that refined text, verbatim**. Compute the delta against it.
+1. **Story already described in Jira/Confluence** (a refined story+AC exists) → baseline = **that refined text, verbatim**. Compute the delta against it.
 2. **Story not yet in Jira** (only WBS) → baseline = **the WBS row, verbatim**. If the WBS row has no user story or is a generic bundled row (e.g. R40), take the WBS AC as-is and mark the story as derived.
 
 The skill does **not** auto-detect which case. It goes by what the BA provides: a Jira key / refined text → branch 1; "not in Jira yet" / only a WBS row → branch 2. If it is unclear, ask exactly one question: **"Is this story already in Jira?"**
