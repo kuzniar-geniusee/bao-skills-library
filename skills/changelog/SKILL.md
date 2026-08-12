@@ -1,6 +1,6 @@
 ---
 name: changelog
-description: "Write a single change-log item as a ready-to-paste horizontal row matching the project's live Change Log sheet. Trigger ONLY when the BA explicitly asks for it — e.g. 'напиши айтем в чейнджлог', 'write a changelog item', 'додай це в change log'. Do NOT trigger merely because a decision or source arrived. Fills content columns A–M (A Change_ID as a placeholder, L Requestor as Change Impact/Geniusee, K Jira ticket = TBD); leaves Responsible, Status, Approval Date, Jira, and all effort columns untouched. A Change Request reuses the current baseline story+AC verbatim (Jira/Notion if the story is described there, else WBS) and marks the delta (strike removed requirements, list new ones). Delivers the item as a horizontal markdown row in chat. Does not edit the Product Context — that is pc-update."
+description: "Write a single change-log item as a ready-to-paste horizontal row matching the project's live Change Log sheet. Trigger ONLY when the BA explicitly asks for it — e.g. 'напиши айтем в чейнджлог', 'write a changelog item', 'додай це в change log'. Do NOT trigger merely because a decision or source arrived. Fills content columns A–M (A Change_ID as a placeholder, L Requestor as <Client>/Geniusee, K Jira ticket = TBD); leaves Responsible, Status, Approval Date, Jira, and all effort columns untouched. A Change Request reuses the current baseline story+AC verbatim (Jira/Notion if the story is described there, else WBS) and marks the delta (strike removed requirements, list new ones). Delivers the item as a horizontal markdown row in chat. Does not edit the Product Context — that is pc-update."
 ---
 
 # Changelog Item
@@ -34,10 +34,10 @@ The Change Log sheet columns are:
 | E | Task / US Description | The user story (see Type logic + Baseline resolution). |
 | F | Acceptance Criteria | The AC, numbered to match the change log's plain-numbered style — **not EARS**. |
 | G | Phase | `MVP` or `Future Phase`. |
-| H | Comments / Questions | Short description of the change; **and for a Change Request, the baseline used** — e.g. `Baseline: Jira CID-632` or `Baseline: WBS R40 (generic, no US)`. |
+| H | Comments / Questions | Short description of the change; **and for a Change Request, the baseline used** — e.g. `Baseline: Jira PROJ-632` or `Baseline: WBS R40 (generic, no US)`. |
 | J | Type | `New Feature Request` or `Change Request` — these two values only. |
 | K | Jira ticket | `TBD`. |
-| L | Requestor | `Change Impact` if the client requested the change; `Geniusee` if it was initiated internally (our dev/design sync, our proposal). Infer from Source. |
+| L | Requestor | `<Client>` (the client's name) if the client requested the change; `Geniusee` if it was initiated internally (our dev/design sync, our proposal). Infer from Source. |
 
 **Leave blank — the skill never fills these:** `I Responsible`, `M Status`, `N Approval Date`, `O Jira`, and all effort columns (`P` onward). These are team / process / estimation metadata owned by PM and estimators.
 
@@ -45,7 +45,7 @@ The Change Log sheet columns are:
 
 ### New Feature Request
 
-No matching item existed. Write **E (story) and F (AC) from scratch** — a proper user story (`As a <role>, I want <action>, so that <benefit>`) and numbered AC in the change log's style. WBS is not involved. Requestor is normally `Change Impact` (a client ask) unless the Source shows it originated internally.
+No matching item existed. Write **E (story) and F (AC) from scratch** — a proper user story (`As a <role>, I want <action>, so that <benefit>`) and numbered AC in the change log's style. WBS is not involved. Requestor is normally `<Client>` (a client ask) unless the Source shows it originated internally.
 
 ### Change Request
 
@@ -63,7 +63,7 @@ The verbatim "original" is whichever baseline currently governs the story:
 
 The skill does **not** auto-detect which case. It goes by what the BA provides: a Jira key / refined text → branch 1; "not in Jira yet" / only a WBS row → branch 2. If it is unclear, ask exactly one question: **"Is this story already in Jira?"**
 
-Always record the baseline used in **H** (e.g. `Baseline: Jira CID-632`, `Baseline: WBS R40 (generic, no US)`) so the delta's origin is self-documenting in the log.
+Always record the baseline used in **H** (e.g. `Baseline: Jira PROJ-632`, `Baseline: WBS R40 (generic, no US)`) so the delta's origin is self-documenting in the log.
 
 ## Removed-AC marking
 

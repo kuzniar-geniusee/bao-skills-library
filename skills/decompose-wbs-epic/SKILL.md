@@ -17,14 +17,14 @@ When the BA wants to break a WBS epic into implementation-ready stories, before 
 
 The BA names the epic. Read these automatically.
 
-1. **WBS** — `/mnt/project/WBS_Change_Impact_Scope_only.xlsx`, sheet **`WBS & Development Efforts`**.
+1. **WBS** — `/mnt/project/WBS.xlsx`, sheet **`WBS & Development Efforts`**.
    - Header is on **row 3**. Relevant columns: `Topic` (A), `User Story` (B), `Acceptance Criteria` (C), `Phase` (I).
    - An **epic** = a `Topic` header row (the UPPERCASE name, e.g. `USER REGISTRATION`) followed by its **parent-story rows** (each with a `User Story` value) until the next Topic header.
    - From each parent-story row take: the parent **story title** (the short `Topic`/`User Story` name), its **raw AC** (`Acceptance Criteria`), and `Phase`.
    - Extract with code, e.g.:
      ```python
      import openpyxl
-     wb = openpyxl.load_workbook('/mnt/project/WBS_Change_Impact_Scope_only.xlsx', data_only=True)
+     wb = openpyxl.load_workbook('/mnt/project/WBS.xlsx', data_only=True)
      ws = wb['WBS & Development Efforts']
      # from row 4: an UPPERCASE Topic with empty User Story = epic header;
      # the rows after it (Topic = short story name, User Story populated) are its parent stories,

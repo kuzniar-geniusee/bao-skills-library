@@ -108,6 +108,6 @@ Regenerate from the settled set only: if Stage 1 dropped an item, it must not ap
 
 Example comment:
 
-> **[Missing vs PC]** The login screen is missing "Continue with Google / Microsoft". PC §4.1 (Danielle + Maddie, 9 Jun 2026) requires social-login on the login page for all users. → add both buttons.
+> **[Missing vs PC]** The login screen is missing "Continue with Google / Microsoft". PC §4.1 (product + tech leads, 9 Jun 2026) requires social-login on the login page for all users. → add both buttons.
 
 Output is in-chat only — ready-to-paste comment text, no file, no diagram edits.

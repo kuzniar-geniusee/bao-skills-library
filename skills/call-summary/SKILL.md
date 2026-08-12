@@ -62,7 +62,7 @@ Attendees: <names + roles>
 
 ## Writing rules
 
-- **No speaker attribution.** Never write who said what — no "Maddie said", "Danielle confirmed", "the client noted". State every decision impersonally, as the session's outcome. This summary is shared with the client; naming who said what is out of place.
+- **No speaker attribution.** Never write who said what — no "X said", "Y confirmed", "the client noted". State every decision impersonally, as the session's outcome. This summary is shared with the client; naming who said what is out of place.
 - **Verbatim only in parentheses, still unattributed.** If exact wording matters, put it in quotes inside parentheses — but never name the person who said it.
 - **Canonical roles only.** Map any legacy or transcript labels (e.g. PGL, GL, SA, PSA, Super Admin, Participant) to the canonical names (System Admin, Admin, Group Owner, Group Leader, Learner). Never show legacy labels in the summary.
 - **Final state, not discussion.** Record the decision reached, not the back-and-forth that produced it.

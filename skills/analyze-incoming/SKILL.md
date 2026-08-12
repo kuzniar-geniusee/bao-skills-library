@@ -33,7 +33,7 @@ Classify the item and say it crisply as "this is X → do Y". The routes below a
 | Route | When | Hand-off |
 |---|---|---|
 | **Apply directly** | A decision already exists, or it is a pure narrowing / cleanup — no client input needed | Name the commit target: PC update · changelog · board comment · requirement/AC edit. Also say whether it can be applied as-is or should still be confirmed with the client (the recurring "apply now vs bring to call" call). The commit itself happens via the matching skill on the BA's command. |
-| **Ask the client** | The item raises something undecided or ambiguous; the client must rule | Draft the question itself — short, in English, addressed to the right person (Danielle for product, Maddie for technical). Flag it if it carries scope risk. |
+| **Ask the client** | The item raises something undecided or ambiguous; the client must rule | Draft the question itself — short, in English, addressed to the right person (the product owner for product, the tech lead for technical). Flag it if it carries scope risk. |
 | **Bring to call** | Needs live discussion, multiple parties, or trade-offs | Note what to put on the agenda and why. |
 | **No action** | Already covered, out of scope, or a note that only needs acknowledging | Say which, and that nothing changes. |
 

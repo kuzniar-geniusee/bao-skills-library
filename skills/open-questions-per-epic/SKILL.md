@@ -56,7 +56,7 @@ One question per row. Wording rules **(shared verbatim with `elicitation-prep` â
 - **Atomic.** One decision per question, so each can be answered and closed independently.
 - **Don't fear "dumb" questions.** Better to ask about the simple than to miss the complex â€” no one else validates this.
 
-When proposing a default, append it in the register as `Proposed: <default>` or `confirm with <person> if <condition>` (e.g. `confirm with Maddie if security constraints apply`).
+When proposing a default, append it in the register as `Proposed: <default>` or `confirm with <person> if <condition>` (e.g. `confirm with the tech lead if security constraints apply`).
 
 Set Address (who/forum), Priority (blocking-first logic), the User Story it belongs to, and Status = Open.
 
