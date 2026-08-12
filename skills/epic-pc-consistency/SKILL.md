@@ -17,7 +17,7 @@ Check one decomposed epic's requirements (stories + AC) against the source of tr
 ## Inputs
 
 - **The epic under review** — its stories + AC (MD export), pasted by the BA. This is what gets validated.
-- **Product Context** — `/mnt/project/Product_Context.md`. The source of truth. Read the **current** document in full; a rule relevant to the epic may live in any section, not only the one matching the epic's name.
+- **Product Context** — `/mnt/project/product_context.md`. The source of truth. Read the **current** document in full; a rule relevant to the epic may live in any section, not only the one matching the epic's name.
 - **Defined epics** — the stories + AC (MD export) of already-defined epics, **provided by the BA**. Needed only for the cross-epic pass, and only for epics that are actually built into requirements — an unbuilt epic cannot clash. The PC alone is **not** enough here: the PC states each rule once and will not reveal that a story duplicates a rule another epic already owns.
 
 ## PC-first — derive before you read

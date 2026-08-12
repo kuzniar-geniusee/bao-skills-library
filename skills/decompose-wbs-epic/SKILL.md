@@ -30,7 +30,7 @@ The BA names the epic. Read these automatically.
      # the rows after it (Topic = short story name, User Story populated) are its parent stories,
      # up to the next header.
      ```
-2. **Product Context** — `/mnt/project/Product_Context.md`. The authoritative source for content. Read it as a whole: for every story search the entire document — a rule relevant to the story may live in any section, not only the one matching the epic's name. Where the Product Context and the WBS raw AC conflict, the Product Context wins.
+2. **Product Context** — `/mnt/project/product_context.md`. The authoritative source for content. Read it as a whole: for every story search the entire document — a rule relevant to the story may live in any section, not only the one matching the epic's name. Where the Product Context and the WBS raw AC conflict, the Product Context wins.
 
 ## Process
 

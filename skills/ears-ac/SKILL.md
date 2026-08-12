@@ -5,15 +5,15 @@ description: "Write Acceptance Criteria in EARS for an approved user story, in t
 
 # /ears-ac
 
-# Purpose
+## What it does
 
 Write Acceptance Criteria in EARS notation for an approved user story (or set), in the project house style. The output should be good enough that team refinement only confirms and fills `TBD`s — not rewrites. Content comes from the Product Context (authoritative), the flowcharts/designs, and the WBS seed.
 
-# When to invoke
+## When to use
 
 After stories are decomposed and approved (decompose-wbs-epic), to write their AC before refinement.
 
-# Before writing any criterion — think from the user
+## Before writing any criterion — think from the user
 
 The single most common failure is writing what the system records, reports, or triggers elsewhere — the *consequences* of an action — instead of what the user does here. Before the first criterion, and again for each one, ask:
 
@@ -24,14 +24,14 @@ The single most common failure is writing what the system records, reports, or t
 
 Write the user's behaviour first; add a consequence as a criterion only when the user directly observes it in this same flow. Everything else is a reference, not a requirement.
 
-# Inputs
+## Inputs
 
 1. The approved story/stories — each with its statement and parent WBS reference.
-2. Product Context — /mnt/project/Product_Context.md. The authoritative source. Read the **current** document as a whole and reconcile **every** criterion against it — a rule, value, message, role, or state relevant to the story may live in any section, not only the one matching the epic's name. Do not rely on memory of an earlier version. Where the Product Context and the WBS raw AC differ, the Product Context is the resolved state — raise the difference as an open question. Write `TBD` only after a full pass over the current Product Context finds nothing.
+2. Product Context — /mnt/project/product_context.md. The authoritative source. Read the **current** document as a whole and reconcile **every** criterion against it — a rule, value, message, role, or state relevant to the story may live in any section, not only the one matching the epic's name. Do not rely on memory of an earlier version. Where the Product Context and the WBS raw AC differ, the Product Context is the resolved state — raise the difference as an open question. Write `TBD` only after a full pass over the current Product Context finds nothing.
 3. Flowcharts / designs — the design-level source for behaviour and screen names; concrete values seen on a mockup (e.g. code length, expiry) are real input, not guesses.
 4. WBS — the parent story's raw AC as a seed.
 
-# EARS patterns
+## EARS patterns
 
 | Pattern | Structure |
 |---|---|
@@ -43,7 +43,7 @@ Write the user's behaviour first; add a consequence as a criterion only when the
 
 Use **must**, never *shall*. Clause order: While -> When -> the system must. Phrase from the user where it reads simpler (`the user can ...`).
 
-# Presentation — write for the reader
+## Presentation — write for the reader
 
 How the criteria are arranged matters as much as their content. A reader should be able to move through them the way they move through the feature.
 
@@ -59,7 +59,7 @@ How the criteria are arranged matters as much as their content. A reader should 
 - **List vs table — the deciding test.** Same outcome shared by every item -> sub-point list under one criterion. A different outcome per item -> reference table. (Sort = one shared "sort by" -> list; Filter = each filter surfaces something different -> table.)
 - **Branches stay visible, but may be grouped.** When one trigger splits into outcomes, show every branch — never hide them behind vague wording ("the system handles it"). Each branch is its own criterion, or a sub-point under one shared criterion, whichever reads better. Collapsing is wrong only when it loses a branch (e.g. dropping the Region step of a two-level selection), not when it groups cleanly.
 
-# Coverage pass — write the full picture, not just the happy path
+## Coverage pass — write the full picture, not just the happy path
 
 Most gaps found in refinement are missing cases, not bad wording. Before finalising a story, walk these five and write a criterion for every case the flow can actually reach (see the reachability filter next):
 
@@ -71,14 +71,14 @@ Most gaps found in refinement are missing cases, not bad wording. Before finalis
 
 This is completeness of behaviour, not bulk — every criterion must still earn its place and pass the reachability filter.
 
-# State-reachability filter — run on every conditional criterion
+## State-reachability filter — run on every conditional criterion
 
 Before writing a criterion about a state or condition, confirm the user can physically reach that state in **this** flow. If they cannot, do not write it.
 
 - Derive reachability from the state's own definition in the Product Context; do not copy a state pair from one flow into another out of habit.
 - A criterion that only describes a state the user can never be in on this screen is noise; drop it.
 
-# Decided vs proposed vs open — never invent behaviour as fact
+## Decided vs proposed vs open — never invent behaviour as fact
 
 When information is missing, do not make it up.
 
@@ -97,7 +97,7 @@ When information is missing, do not make it up.
 - **Derived technical / security mechanism** the client would never state as a need (e.g. how the platform treats an unverified provider email): this is system design, not a product requirement — surface it as an open question and note it likely belongs to the Security / relevant epic, not as a product AC here.
 - **Non-functional requirement** — performance, scalability, load / throughput, response time, availability. A "how fast / how many / under what load" concern is never a functional criterion: do not write it as an AC. It may be parked in Open Questions, flagged as an NFR, so it is not lost (NFRs are handled separately, outside this story's AC). Functional empty/error states stay in the AC; the "how fast / how many / under what load" part leaves.
 
-# Output — one block per story
+## Output — one block per story
 
 Block and group headers in **bold**; the design link given once near the top, never per criterion; every `TBD` written as a `` `TBD` `` code chip.
 
@@ -133,11 +133,11 @@ Block and group headers in **bold**; the design link given once near the top, ne
 1. <one atomic question; propose a default where sensible>
 ```
 
-# Surface
+## Surface
 
 - **Surface note — mandatory, one per story.** Every story carries a one-line Surface note directly under Design, naming the surface(s) it renders on, scoped per actor. Use only the approved surfaces defined in Product Context §2.4 (Admin panel / User front-end, plus the External and none qualifiers); never invent a new surface.
 
-# Acceptance Criteria rules
+## Acceptance Criteria rules
 
 - **Numbered markdown lists, continuous across the story.** Plain `1. 2. 3.`, one criterion per line. The counter runs continuously through all Acceptance Criteria groups (e.g. Sign-up 1-3, then Validation 4-8) so every criterion has a unique number; reference a criterion by that number. Group headings organise the list but do not reset the count. Related stories, Out of Scope, and Open Questions are each their own list, numbered from 1.
 - **No criterion title.** Each numbered item is the requirement itself — do not prefix it with a short `Title —` label (`When the user submits ...`, not `Create account — When the user submits ...`).
@@ -151,7 +151,7 @@ Block and group headers in **bold**; the design link given once near the top, ne
 - **No inline cross-references.** A criterion never points to a sibling story inline (no `-> see <story>` beside a criterion). A part of the flow, rule, or behaviour owned by another story or PC section is referenced only in the Related stories block — never duplicated as a criterion here.
 - **Describe the user's action, not its downstream consequences.** A story owns what the user does on this surface. What that action then causes elsewhere — recalculated learner records, updated reports, a changed certificate, an affiliation stripped when its parent framework is deleted — is not this story's criteria; it belongs to the stories that own those entities and is named in Related stories. If you find yourself writing several criteria about what happens to *other* entities as a result of the action, move them out. A simple action described as one criterion (with sub-conditions) plus a few Related references beats the same action inflated into a dozen criteria across "the action / what it does to learners / what it does to frameworks" groups.
 
-# Optional elements — only when they add clarity, never empty
+## Optional elements — only when they add clarity, never empty
 
 - **Data Dictionary** — only for a form whose fields carry rules (required / accepted values / default / message). Columns exactly: Field Name, Field Type, Required?, Accepted Information, Comments; put the field's validation message, any default-when-empty, and the UI label (when it differs from the canonical name) in Comments. A field captured in the table is not repeated in the criteria — criteria keep only behaviour (submit, save, cross-field rules). A plain list of inputs with no per-field rules is not a table; a single field goes inline.
 - **Related stories** — when parts of this flow are owned by sibling stories (verification, consent, affiliation, a shared step), list them as `-> see <story>` so the reader can find the rest of the flow. These are dependencies, not exclusions.
@@ -160,7 +160,7 @@ Block and group headers in **bold**; the design link given once near the top, ne
 - **Permissions** — never a standalone criterion restating who can do the action (the Story statement already carries the role). Name a role inside a criterion only where the behaviour genuinely branches by role — a reference to the differing branch, not an authorization matrix.
 - **Pre/Post-conditions** — only for a state-driven flow where they aid clarity (e.g. activation: pre = a Pending account exists; post = the account is Inactive (Registered)).
 
-# House style / formatting
+## House style / formatting
 
 - **must**, never *shall*.
 - **Block and group headers in bold** — blocks (Story, Design, Pre-conditions, Acceptance Criteria, Data Dictionary, Related stories, Out of Scope, Open Questions, Call-sites, Post-conditions) and the meaning-based AC group names alike. No underline or colour (they do not survive a copy-paste).
@@ -170,12 +170,12 @@ Block and group headers in **bold**; the design link given once near the top, ne
 - **Open Questions are plainly written** — a clear question the reader understands, with a proposed default where sensible. Do not prefix an owner or route ("Internal", "Client", "Refinement") — the BA assigns the owner afterwards. Never reference a criterion by number inside an Open Question — phrase it so it stands alone.
 - English; one term per concept used identically everywhere; no filler ("as mentioned", "above"), no rationale/commentary inside a criterion, no pronouns (it / he / she); no emojis.
 
-# Anti-hallucination
+## Anti-hallucination
 
 - AC content comes only from the approved story, the current Product Context, the flowcharts/designs, and the WBS seed. Introduce no field, message, role, branch, or rule that is not there.
 - Anything unknown or unclear -> `` `TBD` `` plus an Open-Questions line, or a proposed criterion marked `(proposed — confirm)`. Never present a guess as decided.
 
-# Example (abridged)
+## Example (abridged)
 
 ```
 **Story:** As a Learner, I want to provide my sign-up details, so that I can create an account.
@@ -218,7 +218,7 @@ Block and group headers in **bold**; the design link given once near the top, ne
 ```
 
 
-# Example 2 — a simple action, not its consequences (abridged)
+## Example 2 — a simple action, not its consequences (abridged)
 
 This story's action is small: an admin affiliates compliance categories with a course. The trap is a criterion for every downstream consequence — learner records, reports, certificate, deletion behaviour — none of which this story owns. Keep the criteria to what the admin does; send the consequences to Related stories.
 
@@ -247,7 +247,7 @@ Six criteria on what the admin does — add, dependent lists, add more, remove, 
 
 > Note on term: compliance is "whether a requirement is met", computed from current affiliations — not a "credit" unit. Where a story genuinely needs to record a decided term or a cross-cutting fact like this, a short note is a pragmatic exception to "no catch-all Note block"; keep it to a term/fact, never behaviour.
 
-# Final gate — run mechanically before delivering (never skip on large batches)
+## Final gate — run mechanically before delivering (never skip on large batches)
 
 Before delivering a story's AC, verify each — fix the output until all pass:
 1. Numbering is continuous across all AC groups (groups organise, never reset the counter); Related stories / Out of Scope / Open Questions each restart at 1.
