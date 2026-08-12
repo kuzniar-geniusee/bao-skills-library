@@ -24,7 +24,12 @@ Targeted cross-check against the current PC (and WBS if relevant): what does the
 
 ### 2. Explain the item and the decision behind it
 
-State what the item actually is and the real problem or decision at stake — clearly and directly, in normal working style. Do not just restate the item back verbatim; surface the meaning the BA needs to act on. Keep it as long as the item requires and no longer.
+State what the item actually is and the real problem or decision at stake — clearly and directly, in short scannable sentences: one point per sentence, no nested parentheticals, no restating the same point twice. Ground it against whatever the project already says on this point (PC section, story, WBS, design) and keep that grounding — it is the value — but say it cleanly, not as one dense clause. Do not just restate the item back verbatim; surface the meaning the BA needs to act on. Keep it as long as the item requires and no longer.
+
+*Heavy → clean (same grounding, lighter packaging):*
+
+- Heavy: This is an engineering decision: admins authenticate via SSO (say Okta), not a password. The PC currently leaves the admin invite-acceptance / credential mechanism as TBD (an open question in User Registration). This decision closes that TBD.
+- Clean: Admins will sign in via SSO (Okta), not a password. In the PC the admin-activation mechanism is `TBD` (User Registration) — this closes it.
 
 ### 3. Route to the next action
 
@@ -48,6 +53,7 @@ End at the routing decision (plus the drafted question where the route is "ask t
 - Do not edit the Product Context or write the changelog from this skill — analyze and route only. (Drafting a single client question is allowed; producing PC edits or changelog entries is not.)
 - Do not pick a winner on a real conflict — route it to the client and draft that question.
 - Do not restate the item verbatim instead of explaining it; lead with the decision at stake.
+- Do not bury the grounding in one dense clause with nested parentheticals, or restate the same point twice — keep the project link (PC / story / WBS / design) but say it in short clean sentences.
 - Do not invent project facts — cross-check against the PC/WBS, or mark "not defined, needs confirming".
 
 ## Output
