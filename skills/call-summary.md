@@ -20,37 +20,37 @@ Write a client-facing summary of an elicitation or working session, suitable to 
 
 ## Output
 
-A markdown file, `call_summary_<date>.md`. Shareable with the client.
+A markdown file, `call_summary_[date].md`. Shareable with the client.
 
 ### Structure
 
 ```markdown
-# #<N> Elicitation (<date>)
-Attendees: <names + roles>
-<Duration / Purpose — if known>
+# #[N] Elicitation ([date])
+Attendees: [names + roles]
+[Duration / Purpose — if known]
 
 ## Overview
-<One short paragraph: what the session covered.>
+[One short paragraph: what the session covered.]
 
 ## Decisions
-### <Theme 1>
-- <Decision as a final state, full sentence. MVP / Future tagged where relevant.>
+### [Theme 1]
+- [Decision as a final state, full sentence. MVP / Future tagged where relevant.]
 - ...
-### <Theme 2>
+### [Theme 2]
 - ...
 
 ## Q&A
-<Only when the session ran through a prepared question list.>
+[Only when the session ran through a prepared question list.]
 | Topic | Question | Assumptions | Answer | Status |
 |---|---|---|---|---|
 | ... | ... | ... | ... | resolved / open |
 
 ## Open items
-<Numbered — what remains unresolved or awaiting client input.>
+[Numbered — what remains unresolved or awaiting client input.]
 1. ...
 
 ## Change log
-<Only when relevant: an explicit callout of what from this call goes to the changelog.>
+[Only when relevant: an explicit callout of what from this call goes to the changelog.]
 ```
 
 ## Section rules

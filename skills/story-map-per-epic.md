@@ -17,19 +17,19 @@ After `decompose-wbs-epic` output is approved, when the BA wants the stories as 
 
 The approved `decompose-wbs-epic` output for one epic. From it, read:
 
-- the **epic** name and WBS Topic (from the `# Decomposition — <Epic> (WBS Topic: <TOPIC>)` line);
-- each **parent WBS story** (each `## <parent title>`);
-- the **child stories** under each parent (the numbered `As a <role>, I want <action>, so that <benefit>.` items).
+- the **epic** name and WBS Topic (from the `# Decomposition — [Epic] (WBS Topic: [TOPIC])` line);
+- each **parent WBS story** (each `## [parent title]`);
+- the **child stories** under each parent (the numbered `As a [role], I want [action], so that [benefit].` items).
 
 ## Layout
 
 One epic per file. Build a grid:
 
 ```
-Row 1:  <EPIC>          (col A only)
-Row 2:  <parent 1>   | <parent 2>   | <parent 3>   | ...   ← backbone, one parent per column
-Row 3:  <child 1.1>  | <child 2.1>  | <child 3.1>  | ...   ← child stories stacked under their parent
-Row 4:  <child 1.2>  | <child 2.2>  | ...
+Row 1:  [EPIC]          (col A only)
+Row 2:  [parent 1]   | [parent 2]   | [parent 3]   | ...   ← backbone, one parent per column
+Row 3:  [child 1.1]  | [child 2.1]  | [child 3.1]  | ...   ← child stories stacked under their parent
+Row 4:  [child 1.2]  | [child 2.2]  | ...
 ...
 ```
 
@@ -69,10 +69,10 @@ for r, row in enumerate(grid, start=1):
         if val:
             ws.cell(row=r, column=c, value=val)
 
-wb.save('/mnt/user-data/outputs/story_map_<epic_short>.xlsx')
+wb.save('/mnt/user-data/outputs/story_map_[epic_short].xlsx')
 ```
 
-File name: `story_map_<epic_short>.xlsx` (e.g. `story_map_user_registration.xlsx`).
+File name: `story_map_[epic_short].xlsx` (e.g. `story_map_user_registration.xlsx`).
 
 ## Deliver
 

@@ -37,7 +37,7 @@ The BA names the epic. Read these automatically.
 For the named epic, take each parent WBS story in turn:
 
 - If it is already an atomic, INVEST-compliant vertical slice, keep it as **one story** and say so in a line.
-- Otherwise decompose it into child stories, each a full statement: `As a <role>, I want <action>, so that <benefit>.`
+- Otherwise decompose it into child stories, each a full statement: `As a [role], I want [action], so that [benefit].`
 
 Group every resulting story under its parent WBS story title (this grouping is the traceability link to the parent). Then add **Split flags** and **Gaps & conflicts**, and return the whole thing as markdown.
 
@@ -93,25 +93,25 @@ Surface these for BA review rather than resolving them silently:
 ## Output format
 
 ```
-# Decomposition — <Epic name> (WBS Topic: <TOPIC>)
+# Decomposition — [Epic name] (WBS Topic: [TOPIC])
 
-## <Parent WBS story title>
-Pattern: <pattern(s)>
-1. As a <role>, I want <action>, so that <benefit>.
-2. As a <role>, I want <action>, so that <benefit>.
+## [Parent WBS story title]
+Pattern: [pattern(s)]
+1. As a [role], I want [action], so that [benefit].
+2. As a [role], I want [action], so that [benefit].
 
-## <Parent WBS story title — kept whole>
+## [Parent WBS story title — kept whole]
 Already an atomic slice; kept as one story.
-As a <role>, I want <action>, so that <benefit>.
+As a [role], I want [action], so that [benefit].
 
 ## Split flags
-- <merge / boundary decisions for the BA>
+- [merge / boundary decisions for the BA]
 
 ## Gaps & conflicts
-- WBS↔PC: <divergence; PC is the resolved state>
-- Dependency/duplicate: <…>
-- Role TBD: <…>
-- Missing: <… TBD>
+- WBS↔PC: [divergence; PC is the resolved state]
+- Dependency/duplicate: […]
+- Role TBD: […]
+- Missing: [… TBD]
 ```
 
 Return as markdown.

@@ -25,14 +25,14 @@ Reads project context from Project Knowledge automatically. Add the meeting topi
 - Project context (auto-read from Project Knowledge)
 - Scope parameter — **required**:
  - `project-wide` — general gaps across full project
- - `epic:<epic-name>` — questions specific to one epic
- - `sprint:<sprint-id>` — questions for upcoming sprint scope
- - `topic:<topic>` — focused topic (e.g. payments, auth)
+ - `epic:[epic-name]` — questions specific to one epic
+ - `sprint:[sprint-id]` — questions for upcoming sprint scope
+ - `topic:[topic]` — focused topic (e.g. payments, auth)
 - Optional source artifacts: S&V section, WBS epic rows, Confluence page URL
 
 ## Output filename pattern
 
-`questions_list_<scope>.md`
+`questions_list_[scope].md`
 
 Examples:
 - `questions_list_project_wide.md`
@@ -102,22 +102,22 @@ List-level rules (number and separate each question, order most-blocking-first, 
 Markdown file named per pattern above. Structure:
 
 ```markdown
-# Elicitation Questions — <scope>
+# Elicitation Questions — [scope]
 
 ## Context
-<1-2 sentences — what scope these questions cover>
+[1-2 sentences — what scope these questions cover]
 
 ## Questions by topic
 
-### <Topic 1>
-1. <question> — priority: <high/med/low>
+### [Topic 1]
+1. [question] — priority: [high/med/low]
 2. ...
 
-### <Topic 2>
+### [Topic 2]
 ...
 
 ## Open assumptions
-<things skill assumed when generating — BA should validate>
+[things skill assumed when generating — BA should validate]
 ```
 
 ---

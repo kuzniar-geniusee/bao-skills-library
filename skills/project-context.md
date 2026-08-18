@@ -96,8 +96,8 @@ _Last updated: [date]_
 6. **Engineering / stack / data-model facts**: the engineering technical specification is canonical; the Tech Context file is its BA-facing reconciled digest. When they disagree on an engineering fact, the tech spec wins and triggers a Tech Context reconcile pass (new ADR · model change · epic kickoff). Product decisions still follow Product Context (point 1): where the tech spec and Product Context conflict on a product decision, PC wins and the divergence is surfaced to the BA, never reconciled silently.
 
 ### Conventions
-- **WBS row references**: cited as `R<number>` (e.g. `R152`, `R74`). Numbers are stable within a WBS version; if WBS is re-baselined, references must be reviewed.
-- **Source citations in Product Context**: `Sx transcript HH:MM:SS` or `Sx §<section>`, where the sources are listed in the Product Context source map. These sources are inputs to BA synthesis, NOT files in Project Knowledge — Project Knowledge contains synthesised outputs only.
+- **WBS row references**: cited as `R[number]` (e.g. `R152`, `R74`). Numbers are stable within a WBS version; if WBS is re-baselined, references must be reviewed.
+- **Source citations in Product Context**: `Sx transcript HH:MM:SS` or `Sx §[section]`, where the sources are listed in the Product Context source map. These sources are inputs to BA synthesis, NOT files in Project Knowledge — Project Knowledge contains synthesised outputs only.
 - **Story references**: by title, not ordinal number — numbers drift on renumbering.
 - **`proposed` / `TBD` tags**: any AC / requirement element tagged proposed or TBD must have a concrete Open Question whose answer clears the tag; no orphan tags without an OQ.
 - **Dates**: ISO `YYYY-MM-DD` in artifacts and changelog.

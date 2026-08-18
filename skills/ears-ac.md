@@ -102,35 +102,35 @@ When information is missing, do not make it up.
 Block and group headers in **bold**; the design link given once near the top, never per criterion; every `TBD` written as a `` `TBD` `` code chip.
 
 ```
-**Story:** As a <role>, I want <action>, so that <benefit>.
+**Story:** As a [role], I want [action], so that [benefit].
 
-**Design:** <one Figma link, or several if the story spans screens>
+**Design:** [one Figma link, or several if the story spans screens]
 
-**Surface:** <one-line note per actor, from Product Context §2.4 — e.g. `User front-end (Group Owner, Group Leader)`; use only approved surfaces, never invent>
+**Surface:** [one-line note per actor, from Product Context §2.4 — e.g. `User front-end (Group Owner, Group Leader)`; use only approved surfaces, never invent]
 
-**Pre-conditions:** <only for a state-driven flow that needs them>
+**Pre-conditions:** [only for a state-driven flow that needs them]
 
 **Acceptance Criteria**
 
-**<Group name>**            (group by meaning, only where it helps; high-level first)
-1. <criterion>
-2. <criterion>
+**[Group name]**            (group by meaning, only where it helps; high-level first)
+1. [criterion]
+2. [criterion]
 
-**<Group name>**            (numbering continues, does not reset)
-3. <criterion>
+**[Group name]**            (numbering continues, does not reset)
+3. [criterion]
 
 **Data Dictionary**         (only for a form with fields that have rules)
 | Field Name | Field Type | Required? | Accepted Information | Comments |
 |---|---|---|---|---|
 
 **Related stories**         (parts of the flow owned by sibling stories; numbered)
-1. <part of the flow that lives elsewhere> -> see <story>
+1. [part of the flow that lives elsewhere] -> see [story]
 
 **Out of Scope**            (only what is deliberately not done; numbered)
-1. <what could be expected here but is intentionally excluded / Future Phase / not collected>
+1. [what could be expected here but is intentionally excluded / Future Phase / not collected]
 
 **Open Questions**          (numbered, plainly written)
-1. <one atomic question; propose a default where sensible>
+1. [one atomic question; propose a default where sensible]
 ```
 
 ## Surface
@@ -148,13 +148,13 @@ Block and group headers in **bold**; the design link given once near the top, ne
 - **Testable and measurable.** No vague "fast", "user-friendly". Give a concrete value/limit or mark `TBD`.
 - **No meta criteria.** Do not write a criterion that just points at the Data Dictionary ("validate the fields per the table") — the table plus a single "outside its accepted information" criterion cover it.
 - **Behaviour belongs in criteria.** If any line describes what the system does, it is a numbered criterion — never prose in the Story preamble or anywhere else. Every piece of content has one home: behaviour -> a criterion; an excluded/Future-Phase item -> Out of Scope; a part of the flow owned elsewhere -> Related stories; a scope condition -> a clause inside the criterion it qualifies (`Where the flow is B2C, ...`). There is no catch-all "Note" block.
-- **No inline cross-references.** A criterion never points to a sibling story inline (no `-> see <story>` beside a criterion). A part of the flow, rule, or behaviour owned by another story or PC section is referenced only in the Related stories block — never duplicated as a criterion here.
+- **No inline cross-references.** A criterion never points to a sibling story inline (no `-> see [story]` beside a criterion). A part of the flow, rule, or behaviour owned by another story or PC section is referenced only in the Related stories block — never duplicated as a criterion here.
 - **Describe the user's action, not its downstream consequences.** A story owns what the user does on this surface. What that action then causes elsewhere — recalculated learner records, updated reports, a changed certificate, an affiliation stripped when its parent framework is deleted — is not this story's criteria; it belongs to the stories that own those entities and is named in Related stories. If you find yourself writing several criteria about what happens to *other* entities as a result of the action, move them out. A simple action described as one criterion (with sub-conditions) plus a few Related references beats the same action inflated into a dozen criteria across "the action / what it does to learners / what it does to frameworks" groups.
 
 ## Optional elements — only when they add clarity, never empty
 
 - **Data Dictionary** — only for a form whose fields carry rules (required / accepted values / default / message). Columns exactly: Field Name, Field Type, Required?, Accepted Information, Comments; put the field's validation message, any default-when-empty, and the UI label (when it differs from the canonical name) in Comments. A field captured in the table is not repeated in the criteria — criteria keep only behaviour (submit, save, cross-field rules). A plain list of inputs with no per-field rules is not a table; a single field goes inline.
-- **Related stories** — when parts of this flow are owned by sibling stories (verification, consent, affiliation, a shared step), list them as `-> see <story>` so the reader can find the rest of the flow. These are dependencies, not exclusions.
+- **Related stories** — when parts of this flow are owned by sibling stories (verification, consent, affiliation, a shared step), list them as `-> see [story]` so the reader can find the rest of the flow. These are dependencies, not exclusions.
 - **Out of Scope** — only what is deliberately not done: not collected, Future Phase, or explicitly excluded (e.g. "Username is not collected"; a field deferred to a later phase). Never list sibling stories here — those go under Related stories. Omit when nothing genuine applies; never write `n/a`.
 - **Call-sites** — for a shared/canonical story (consent, verification, staff role), list the flows that reuse it and the flows that explicitly do not.
 - **Permissions** — never a standalone criterion restating who can do the action (the Story statement already carries the role). Name a role inside a criterion only where the behaviour genuinely branches by role — a reference to the differing branch, not an authorization matrix.
@@ -199,12 +199,12 @@ Block and group headers in **bold**; the design link given once near the top, ne
 **Data Dictionary**
 | Field Name | Field Type | Required? | Accepted Information | Comments |
 |---|---|---|---|---|
-| Email | input | Yes | valid format, contains "@", <= 254 characters | "Enter a valid email address" |
+| Email | input | Yes | valid format, contains "@", [= 254 characters | "Enter a valid email address" |
 | Password | input | Yes | per the password security rules | `TBD` — see Open Question 2 |
-| First name | input | Yes | >= 2 and <= 50 characters | empty: "First name is required" |
+| First name | input | Yes | ]= 2 and [= 50 characters | empty: "First name is required" |
 
 **Related stories**
-1. Email verification -> see Verify email.
+1. Email verification -] see Verify email.
 2. Consent to Terms of Use & Privacy Policy -> see Agree to Terms of Use & Privacy Policy.
 3. State and compliance framework affiliation -> see Set state and compliance framework affiliation.
 

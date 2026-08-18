@@ -44,7 +44,7 @@ After each source the BA provides:
    - Refine prior statements where this source clarifies them.
    - Record contradictions in §9 (both versions, with citations).
    - Add the source to §11.1 with date and a short description.
-   - Close items in §9 that this source answers — keep them visible with a `Closed by: <source>` note for traceability. (Resolved questions may later be removed during a dedicated cleanup; do not delete them here.)
+   - Close items in §9 that this source answers — keep them visible with a `Closed by: [source]` note for traceability. (Resolved questions may later be removed during a dedicated cleanup; do not delete them here.)
 2. Deliver the full updated `product_context.md` as a file.
 3. Give a short changelog in chat (5–10 lines): which sections changed, which new capabilities / rules / entities / roles / integrations / constraints were added, which contradictions were recorded, which open questions were opened or closed.
 4. Wait for the next source. Do not rebuild the document from scratch to show progress — updates are targeted and traceable.
@@ -58,8 +58,8 @@ When the BA says "збираємо" / "build product_context" / "finalize": veri
 Instantiate exactly this structure. The slots are intentionally empty until a source fills them.
 
 ```markdown
-# Product Context — <project name from sources>
-_Last updated: <date> · Sources processed: <list with dates>_
+# Product Context — [project name from sources]
+_Last updated: [date] · Sources processed: [list with dates]_
 
 ## 1. Product overview
 Two-paragraph description of what the product is, for whom, key value
@@ -100,7 +100,7 @@ Initiatives running alongside the MVP without blocking it. Status + known detail
 Items where sources are silent, ambiguous, or contradictory. For each:
 - the question
 - date and source where it first appeared
-- status: Open / Closed by <source>
+- status: Open / Closed by [source]
 - if closed: the resolution and the source that resolved it
 
 ## 10. Glossary

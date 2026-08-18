@@ -27,7 +27,7 @@ Generate a per-epic open-questions register as an `.xlsx`. Each sheet is one epi
 | Column | Meaning |
 |---|---|
 | **User Story** | The epic's story / WBS item the question hangs off. Leave blank when it repeats the row above (visual grouping under one story). |
-| **Address** | Routing tag, format `<Who> / <Forum>` — who resolves the question and in what forum. Open vocabulary (not a fixed list). Who: `Client` (the client must rule) or `Internal` (we decide), extensible. Forum: `Refinement`, `SA`, etc., extensible. Examples: `Client / Refinement`, `Internal / Refinement`, `Internal / SA`. |
+| **Address** | Routing tag, format `[Who] / [Forum]` — who resolves the question and in what forum. Open vocabulary (not a fixed list). Who: `Client` (the client must rule) or `Internal` (we decide), extensible. Forum: `Refinement`, `SA`, etc., extensible. Examples: `Client / Refinement`, `Internal / Refinement`, `Internal / SA`. |
 | **Priority** | `High` / `Med` / `Low`. High = blocks writing AC for this story. Med = needed soon but not blocking. Low = deferrable / nice-to-have. |
 | **Questions** | One atomic question (see wording rules below). |
 | **Answer** | Blank — filled when the question is resolved. |
@@ -56,7 +56,7 @@ One question per row. Wording rules **(shared verbatim with `elicitation-prep` �
 - **Atomic.** One decision per question, so each can be answered and closed independently.
 - **Don't fear "dumb" questions.** Better to ask about the simple than to miss the complex — no one else validates this.
 
-When proposing a default, append it in the register as `Proposed: <default>` or `confirm with <person> if <condition>` (e.g. `confirm with the tech lead if security constraints apply`).
+When proposing a default, append it in the register as `Proposed: [default]` or `confirm with [person] if [condition]` (e.g. `confirm with the tech lead if security constraints apply`).
 
 Set Address (who/forum), Priority (blocking-first logic), the User Story it belongs to, and Status = Open.
 

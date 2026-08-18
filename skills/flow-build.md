@@ -44,12 +44,12 @@ From the pasted roadmap, take every row whose **Flow ID starts with the given pr
 **Echo the resulting list to the BA before any Figma call** (this doubles as the approval gate):
 
 ```
-Epic: <name> (prefix <PREFIX>)
+Epic: [name] (prefix [PREFIX])
 Will build (N):
-  <FLOW-ID> · <Flow Name> · <Delivery Readiness>
+  [FLOW-ID] · [Flow Name] · [Delivery Readiness]
   ...
 Skipped (M):
-  <FLOW-ID> · <Flow Name> · <reason: Out of MVP / Blocked / Internal Reference>
+  [FLOW-ID] · [Flow Name] · [reason: Out of MVP / Blocked / Internal Reference]
 ```
 
 Wait for **"ok"** on the list before moving to the per-flow briefs. (For a draft-driven session, echo the handed set instead of the prefix filter.)
@@ -87,8 +87,8 @@ Resolve `planKey` first: if the BA provided a team/org key, use it verbatim; oth
 
 Orchestration — **create the file first** (`generate_diagram` never returns a usable `fileKey`, so it cannot seed the file; `create_new_file` is the reliable way to get one file that every flow lands in):
 
-1. **Create the file once:** `Figma:create_new_file(editorType="figjam", fileName="<Epic> — Flows", planKey=…)` → capture `file_key` from the response.
-2. **Each flow:** `Figma:generate_diagram(fileKey=<file_key>, mermaidSyntax=…, name="<Flow ID> · <Flow Name>")` — one call per flow = one section, all in the one file. Draw a flow only after its brief was approved in Step 3.
+1. **Create the file once:** `Figma:create_new_file(editorType="figjam", fileName="[Epic] — Flows", planKey=…)` → capture `file_key` from the response.
+2. **Each flow:** `Figma:generate_diagram(fileKey=[file_key], mermaidSyntax=…, name="[Flow ID] · [Flow Name]")` — one call per flow = one section, all in the one file. Draw a flow only after its brief was approved in Step 3.
 3. If `create_new_file` fails or FigJam is unavailable, **stop and tell the BA** — recommend a plan/seat with edit rights. Do not scatter flows across separate files, and do not silently fall back to a Claude artifact or raw-Mermaid-only output.
 
 Return the FigJam link when done.
@@ -118,7 +118,7 @@ Build **stakeholder-review flowcharts**, not technical architecture diagrams. A 
 
 ### Title + metadata (per flow)
 
-- Wrap the whole flow in a Mermaid `subgraph` whose label is the title: `<Flow ID> · <Flow Name>` (the subgraph label renders as the on-canvas title).
+- Wrap the whole flow in a Mermaid `subgraph` whose label is the title: `[Flow ID] · [Flow Name]` (the subgraph label renders as the on-canvas title).
 - Directly under the title, one **single-line metadata note** node — **only `Actor` + `Scope`** (fields joined by ` -- `; drop Source and Status, they add noise). For a multi-surface flow, fold the surfaces into Scope (e.g. `Scope: Admin panel + User front-end`):
   ```
   Actor: … -- Scope: …

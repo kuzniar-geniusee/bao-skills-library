@@ -52,7 +52,7 @@ A section the epic does not touch is omitted — do not create empty noise.
 3. **Show the planned tree to the BA and wait for `ok`** before creating anything.
 4. On approval, create via Atlassian MCP:
    - a parent page `[Epic name] — Specification` under the given parent page;
-   - one child page per section, each containing only its heading and a one-line `> Fill: <what goes here>` placeholder.
+   - one child page per section, each containing only its heading and a one-line `> Fill: [what goes here]` placeholder.
 5. Return the parent link and the parent → children map.
 
 ## Output
