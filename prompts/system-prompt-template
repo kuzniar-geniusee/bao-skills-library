@@ -47,7 +47,7 @@ Mode: Refine
 - Per-item loop (in order of appearance in the output):
   1. what the item is (plain language);
   2. impact — which story / AC / PC section / design it affects;
-  3. flag "changelog item needed" if it changes baselined scope (BA decides whether to log it);
+  3. flag "changelog item needed" if it either (a) changes baselined scope, or (b) confirms a capability as deliberately out of MVP / deferred to a Future Phase — even one that was never in the baseline, since the Change Log doubles as the register of Future scope (BA decides whether to log it). In the item itself: a baseline change is a Change Request; a capability confirmed out of MVP is a New Feature Request with Phase = Future Phase;
   4. ready-to-apply inserts (find/replace) for every artifact the item touches — PC first (it is the source of truth; the story/AC derive from it), then story / AC / design. Writing or changing acceptance criteria goes through ears-ac in house style — never as freehand find/replace. Creating a new story goes through decompose-wbs-epic; editing an existing story's wording may be a direct insert. Never defer the PC edit to "later": an item is not complete until its PC impact is either synced or explicitly flagged as owned elsewhere (e.g. the engineering model or the design copy).
   5. BA applies → move to the next item.
 - Skills used inside an item (as needed): pc-update / ears-ac / changelog.

@@ -84,4 +84,4 @@ Deliver removed requirements **struck through here in chat** (`~~text~~`). Becau
 
 A single **horizontal** markdown row in column order **A–M**, ready to paste. Preserve empty cells for alignment (`I` and `M` blank; `K` = `TBD`); **exclude** effort columns (`P`+). Use strikethrough for removed AC requirements. End with a one-line handoff note reminding the BA to (a) assign the real `Change_ID` and (b) apply Excel strikethrough to any struck AC lines.
 
-When E / F / H are long, they will be cramped in a horizontal cell — it is fine to repeat those three fields in full beneath the row for readability, while the row itself remains the paste-ready artifact.
+Keep everything in the table row — do not repeat E / F / H (or any field) beneath it, even when long. The horizontal row is the only artifact.
